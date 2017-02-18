@@ -2,6 +2,13 @@
 	<head>
 		<title>Dish Network Corporate Account Page</title>
 		<link rel='stylesheet' href='../css/corporate-account.css'>
+
+		<!-- Natural Language Processing -->
+		<script src='https://unpkg.com/nlp_compromise@latest/builds/nlp_compromise.min.js'></script>
+		
+		<!-- Autocomplete -->
+		<link rel='stylesheet' href='../css/awesomplete.css'/>
+		<script src='../js/awesomplete.min.js' async></script>
 	</head>
 	<body>
 		<img class='menu-icon' src='../res/menu.svg'>
@@ -14,7 +21,22 @@
 			<div class='left-column'>
 				<div class='search-bar'>
 					<form class='search-form'>
-						<input class='search-query' placeholder='Search for an issue or support agent'>
+						<input class='search-query awesomplete' placeholder='Search for an issue or support agent' list='issuesAndAgents'>
+						<datalist id='issuesAndAgents'>
+							<option>Billing</option>
+							<option>Payment</option>
+							<option>Unable to pay</option>
+							<option>Billing and payment</option>
+							<option>Problems with billing</option>
+							<option>Problems with payment</option>
+							<option>Overcharged</option>
+							<option>Sheila Bleyhl</option>
+							<option>Brandon Gene</option>
+							<option>Lauren Darrin</option>
+							<option>Ronald Reagan</option>
+							<option>Jerrod Sigmund</option>
+							<option>Len Slade</option>
+						</datalist>
 					</form>
 					<img class='search-icon' src='../res/search.svg'>
 				</div>
@@ -53,12 +75,19 @@
 			<div class='right-column'>
 				<div class='video-feed'>
 					<div class='video'>
-						<div class='video-text'>Live Now</div>
+						<img src="../res/hqdefault-3.jpg"/>
+						<div class='video-text corporate-account-video-text-live'>Live Now</div>
 					</div>
 					<div class='divider'> </div>
-					<div class='video'> </div>
-					<div class='video'> </div>
-					<div class='video'> </div>
+					<div class='video'>
+						<img src="../res/hqdefault.jpg" class="corporate-account-video-player-posistion" />
+						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
+					<div class='video'>
+						<img src="../res/hqdefault-4.jpg" class="corporate-account-video-player-posistion" />
+						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
+					<div class='video'>
+						<img src="../res/hqdefault-2.jpg" class="corporate-account-video-player-posistion" />
+						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
 					<div class='video'>
 						<div class='video-text'>Check out more videos</div>
 					</div>

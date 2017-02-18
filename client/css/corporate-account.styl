@@ -187,10 +187,12 @@ html, body
 	flex-direction column
 
 .video
-	set-dimension(250px, 80%)
+	set-dimension(265px, 66%)
 	background grey
 	margin 24px 0
 	position relative
+	overflow-x hidden
+	overflow-y hidden
 
 	&:hover
 		cursor pointer
@@ -202,11 +204,33 @@ html, body
 
 .video-text
 	center(50%, , , 50%)
-	color white
 	font-family 'Open Sans'
-	font-size 28px
+	font-size 40px
 	text-align center
-	max-width 40%
+	font-weight bold	
+	max-width 50%
+
+.corporate-account-video-text-dead
+	color white
+
+.corporate-account-video-text-live
+	color red
+
+.corporate-account-video-text-live:hover
+	font-size 42px
+
+.corporate-account-video-player-posistion
+	margin-left 0px
+
+.corporate-account-video-player-play-button
+	center(50%, , , 50%)
+	height 100px
+	width 100px
+	z-index 10
+
+.corporate-account-video-player-play-button:hover
+	height 110px
+	width 110px
 
 .footer
 	set-dimension(200px, 100vw)
