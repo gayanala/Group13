@@ -1,9 +1,11 @@
 import { Agents } from '../../collections/agents.js';
 import { Videos } from '../../collections/videos.js';
+import { Companies } from '../../collections/companies.js';
 
 Template.corporateAccount.onCreated(function() {
     Meteor.subscribe('Agents');
 	Meteor.subscribe('Videos');
+	Meteor.subscribe('Companies');
 });
 
 Template.corporateAccount.helpers({
@@ -53,6 +55,16 @@ Template.corporateAccount.helpers({
 		}
 		
 		return nonLiveVideosData;
+	},
+	companyName: function() {
+		var companyId = FlowRouter.getParam('companyId');
+		
+		return Companies.findOne({_id: companyId}).companyName;
+	},
+	companyShortName: function() {
+		var companyId = FlowRouter.getParam('companyId');
+		
+		return Companies.findOne({_id: companyId}).shortName;
 	}
 });
 

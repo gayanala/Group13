@@ -12,6 +12,11 @@ CompanySchema = new SimpleSchema({
 		type: String,
 		label: 'Company Short Name',
 		optional: false
+	},
+	className: {
+		type: String,
+		label: 'Company Class Name',
+		optional: false
 	}
 });
 

@@ -31,35 +31,60 @@ Meteor.startup(() => {
 		//Company 1
 		Companies.insert({
 			companyName: 'CSG International',
-			shortName: 'CSGi'
+			shortName: 'CSGi',
+			className: 'cox'
 		});
 		//Company 2
 		Companies.insert({
 			companyName: 'Penske',
-			shortName: 'Penske'
+			shortName: 'Penske',
+			className: 'penske'
 		});
 		
 		//Company 3
 		Companies.insert({
 			companyName: 'Comcast',
-			shortName: 'Comcast'
+			shortName: 'Comcast',
+			className: 'comcast'
 		});
 		
 		//Company 4
 		Companies.insert({
 			companyName: 'Dish Network',
-			shortName: 'Dish'
+			shortName: 'Dish',
+			className: 'dish'
 		});
 		
 		//Company 5
 		Companies.insert({
 			companyName: 'Cox Communications',
-			shortName: 'Cox'
+			shortName: 'Cox',
+			className: 'cox'
+		});
+		
+		//Company 6
+		Companies.insert({
+			companyName: 'Charter Communications',
+			shortName: 'Charter',
+			className: 'penske'
+		});
+		
+		//Company 7
+		Companies.insert({
+			companyName: 'Verizon Wireless',
+			shortName: 'Verizon',
+			className: 'comcast'
+		});
+		
+		//Company 8
+		Companies.insert({
+			companyName: 'Virgin Mobile',
+			shortName: 'Virgin Mobile',
+			className: 'cox'
 		});
 	}
 	
 	var csgiCompanyId = Companies.find({shortName:'CSGi'}).fetch()[0]._id;
-	console.log("COMPANY ID: " + csgiCompanyId);
 	
 	// Initialize the Agents database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 

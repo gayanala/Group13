@@ -14,7 +14,7 @@
 		<img class='menu-icon' src='../res/menu.svg'>
 		<div class='splash-banner'>
 			<div class='splash-filter'> </div>
-			<div class='splash-title'>CSG International</div>
+			<div class='splash-title'>{{companyName}}</div>
 		</div>
 		<div class='splash-padding'> </div>
 		<div class='account-content'>
@@ -73,7 +73,7 @@
 			</div>
 			<div class='right-column'>
 				<div class='video-feed'>
-					<div class='video-feed-title'>Videos by CSGi</div>
+					<div class='video-feed-title'>Videos by {{companyShortName}}</div>
 					{{#each liveVideos}}
 						<div class='video live-video clickable-video' id='{{_id}}'>
 							<img src='{{imageUrl}}' class='clickable-video' id='{{_id}}'/>
