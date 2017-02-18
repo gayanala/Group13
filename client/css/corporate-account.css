@@ -167,11 +167,13 @@ body {
   flex-direction: column;
 }
 .video {
-  height: 250px;
-  width: 80%;
+  height: 265px;
+  width: 66%;
   background: #ddd;
   margin: 24px 0;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .video:hover {
   cursor: pointer;
@@ -188,11 +190,37 @@ body {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   font-family: 'Open Sans';
-  font-size: 28px;
+  font-size: 40px;
   text-align: center;
-  max-width: 40%;
+  font-weight: bold;
+  max-width: 50%;
+}
+.corporate-account-video-text-dead {
+  color: #fff;
+}
+.corporate-account-video-text-live {
+  color: #f00;
+}
+.corporate-account-video-text-live:hover {
+  font-size: 42px;
+}
+.corporate-account-video-player-posistion {
+  margin-left: 0px;
+}
+.corporate-account-video-player-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  z-index: 10;
+}
+.corporate-account-video-player-play-button:hover {
+  height: 110px;
+  width: 110px;
 }
 .footer {
   height: 200px;
