@@ -105,14 +105,12 @@
   margin-bottom: 24px;
 }
 .ls-notes {
-  height: 400px;
+  height: 500px;
   width: 80%;
-  background: #ddd;
 }
-.ls-notes textarea {
-  height: 100%;
-  width: 100%;
-  font-size: 24px;
+.froala-reactive-meteorized,
+.fr-wrapper {
+  height: 90%;
   font-family: 'Open Sans';
 }
 .download-notes {
@@ -129,11 +127,6 @@
 .download-notes:hover {
   cursor: pointer;
 }
-
-.froala-reactive-meteorized, .fr-wrapper {
-	height: 90%;
-}
-
 .uploadInput {
   display: none;
 }
