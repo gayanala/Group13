@@ -43,6 +43,18 @@ Template.livestream.helpers({
 		
 		return false;
 	},
+  
+	agentId: function() {
+		var video = Videos.findOne({_id: FlowRouter.getParam('id')});
+		
+		if(video == undefined) {
+			var agent = Agents.findOne({_id: FlowRouter.getParam('id')});
+			return agent._id;
+		}
+
+		return video.agent._id; 
+  },
+    
 	companyName: function() {
 		var company = Companies.findOne({_id: FlowRouter.getParam('companyId')});
 		
