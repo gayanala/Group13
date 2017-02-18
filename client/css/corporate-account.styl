@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
 grey = #ddd
+dark-grey = #36454F
 
 set-position(t = auto, r = auto, b = auto, l = auto)
 	position absolute
@@ -152,8 +153,11 @@ html, body
 	&:hover
 		cursor pointer
 
-.agent-row .image
-	margin 0 16px
+	& .image
+		margin 0 16px
+
+	& div:hover
+		text-decoration underline
 
 .agent-name
 	font-size 32px
@@ -175,32 +179,38 @@ html, body
 	background red
 
 .right-column
-	flex-grow 2
+	flex-grow 1
 	padding 48px 24px
 	box-sizing border-box
 
 .video-feed
-	border 2px solid grey
 	padding 24px 0
+	border 2px solid grey
 	display flex
 	align-items center
 	flex-direction column
 
+.video-feed-title
+	font-family 'Open Sans'
+	font-size 48px
+
 .video
-	set-dimension(265px, 66%)
+	set-dimension(265px, 65%)
 	background grey
 	margin 24px 0
 	position relative
 	overflow-x hidden
 	overflow-y hidden
+	border 2px solid grey
 
 	&:hover
 		cursor pointer
 
-.divider
-	set-dimension(2px, 80%)
-	background grey
-	margin 24px 0
+.live-video
+	set-dimension(300px, 75%)
+
+	& img
+		set-dimension(100%, )
 
 .video-text
 	center(50%, , , 50%)
@@ -210,27 +220,26 @@ html, body
 	font-weight bold
 	max-width 50%
 
-.corporate-account-video-text-dead
+.text-live
 	color white
+	text-shadow 0 0 4px rgba(0, 0, 0, 0.5)
+	transition all 0.25s
 
-.corporate-account-video-text-live
-	color red
+	&:hover
+		font-size 42px
+		text-shadow 0 0 8px rgba(0, 0, 0, 0.5)
 
-.corporate-account-video-text-live:hover
-	font-size 42px
-
-.corporate-account-video-player-posistion
+.player-position
 	margin-left 0px
 
-.corporate-account-video-player-play-button
+.play-button
 	center(50%, , , 50%)
-	height 100px
-	width 100px
+	set-dimension(100px, 100px)
 	z-index 10
+	transition all 0.25s
 
-.corporate-account-video-player-play-button:hover
-	height 110px
-	width 110px
+	&:hover
+		set-dimension(110px, 110px)
 
 .footer
 	set-dimension(200px, 100vw)
@@ -240,4 +249,4 @@ html, body
 	font-size 24px
 	color white
 	font-family 'Open Sans'
-	background #36454F
+	background dark-grey

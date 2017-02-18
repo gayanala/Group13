@@ -133,6 +133,9 @@ body {
 .agent-row .image {
   margin: 0 16px;
 }
+.agent-row div:hover {
+  text-decoration: underline;
+}
 .agent-name {
   font-size: 32px;
   font-weight: 700;
@@ -155,34 +158,40 @@ body {
   background: #f00;
 }
 .right-column {
-  flex-grow: 2;
+  flex-grow: 1;
   padding: 48px 24px;
   box-sizing: border-box;
 }
 .video-feed {
-  border: 2px solid #ddd;
   padding: 24px 0;
+  border: 2px solid #ddd;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+.video-feed-title {
+  font-family: 'Open Sans';
+  font-size: 48px;
+}
 .video {
   height: 265px;
-  width: 66%;
+  width: 65%;
   background: #ddd;
   margin: 24px 0;
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
+  border: 2px solid #ddd;
 }
 .video:hover {
   cursor: pointer;
 }
-.divider {
-  height: 2px;
-  width: 80%;
-  background: #ddd;
-  margin: 24px 0;
+.live-video {
+  height: 300px;
+  width: 75%;
+}
+.live-video img {
+  height: 100%;
 }
 .video-text {
   position: absolute;
@@ -196,19 +205,19 @@ body {
   font-weight: bold;
   max-width: 50%;
 }
-.corporate-account-video-text-dead {
+.text-live {
   color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+  transition: all 0.25s;
 }
-.corporate-account-video-text-live {
-  color: #f00;
-}
-.corporate-account-video-text-live:hover {
+.text-live:hover {
   font-size: 42px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
-.corporate-account-video-player-posistion {
+.player-position {
   margin-left: 0px;
 }
-.corporate-account-video-player-play-button {
+.play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -217,8 +226,9 @@ body {
   height: 100px;
   width: 100px;
   z-index: 10;
+  transition: all 0.25s;
 }
-.corporate-account-video-player-play-button:hover {
+.play-button:hover {
   height: 110px;
   width: 110px;
 }
