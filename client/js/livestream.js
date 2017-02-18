@@ -53,8 +53,7 @@ Template.livestream.helpers({
 		}
 
 		return video.agent._id; 
-  },
-    
+	},
 	companyName: function() {
 		var company = Companies.findOne({_id: FlowRouter.getParam('companyId')});
 		
