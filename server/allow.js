@@ -1,16 +1,29 @@
 import { Meteor } from 'meteor/meteor';
 
 import { Agents } from '../collections/agents.js';
+import { Videos } from '../collections/videos.js';
 
 export function allowAll() {
 	Agents.allow({
-		'insert': function(userId, doc) {
+		'insert': function(agentId, doc) {
 			return true;
 		},
-		'update': function(userId, doc) {
+		'update': function(agentId, doc) {
 			return true;
 		},
-		'remove': function(userId, doc) {
+		'remove': function(agentId, doc) {
+			return true;
+		}
+	});
+	
+	Videos.allow({
+		'insert': function(videoId, doc) {
+			return true;
+		},
+		'update': function(videoId, doc) {
+			return true;
+		},
+		'remove': function(videoId, doc) {
 			return true;
 		}
 	});

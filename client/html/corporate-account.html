@@ -74,23 +74,19 @@
 			</div>
 			<div class='right-column'>
 				<div class='video-feed'>
-					<div class='video'>
-						<img src="../res/hqdefault-3.jpg"/>
-						<div class='video-text corporate-account-video-text-live'>Live Now</div>
-					</div>
+					{{#each liveVideos}}
+						<div class='video'>
+							<img src='{{imageUrl}}'/>
+							<div class='video-text corporate-account-video-text-live'>Live Now</div>
+						</div>
+					{{/each}}
 					<div class='divider'> </div>
-					<div class='video'>
-						<img src="../res/hqdefault.jpg" class="corporate-account-video-player-posistion" />
-						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
-					<div class='video'>
-						<img src="../res/hqdefault-4.jpg" class="corporate-account-video-player-posistion" />
-						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
-					<div class='video'>
-						<img src="../res/hqdefault-2.jpg" class="corporate-account-video-player-posistion" />
-						<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/></div>
-					<div class='video'>
-						<div class='video-text'>Check out more videos</div>
-					</div>
+					{{#each nonLiveVideos}}
+						<div class='video'>
+							<img src='{{imageUrl}}' class="corporate-account-video-player-posistion" />
+							<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/>
+						</div>
+					{{/each}}
 				</div>
 			</div>
 		</div>
