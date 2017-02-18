@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
-grey = #EDEDED
+grey = #ddd
 
 set-position(t = auto, r = auto, b = auto, l = auto)
 	position absolute
@@ -42,9 +42,6 @@ html, body
 	padding 0
 	overflow-x hidden
 
-.csg-header
-	set-dimension(, 100vw)
-
 .menu-icon
 	set-position(32px, 32px)
 
@@ -82,7 +79,7 @@ html, body
 	set-dimension(64px, 70%)
 	border-radius 32px
 	background white
-	border 3px solid #CCCCCC
+	border 3px solid grey
 	padding 12px
 	box-sizing border-box
 	position relative
@@ -102,10 +99,9 @@ html, body
 	outline none
 	text-align right
 	font-size 24px
-	color #CCCCCC
 
 	&::-webkit-input-placeholder
-		color #CCCCCC
+		color grey
 
 .search-icon
 	set-dimension(, 64px)
@@ -131,6 +127,9 @@ html, body
 .agent-photo
 	set-dimension(100%, )
 
+	&:hover
+		cursor pointer
+
 .agent-information
 	padding 16px 32px
 	flex-grow 1
@@ -140,6 +139,9 @@ html, body
 	set-dimension(44px, 100%)
 	display flex
 	align-items center
+
+	&:hover
+		cursor pointer
 
 .agent-row .image
 	margin 0 16px
@@ -153,6 +155,9 @@ html, body
 	padding 4px 24px
 	color white
 	border-radius 32px
+
+	&:hover
+		cursor pointer
 
 .agent-availability
 	background green
