@@ -4,7 +4,12 @@
 		<link rel='stylesheet' href='../css/hub.css'>
 	</head>
 	<body>
-		<img class='hub-menu-icon' src='../res/menu.svg'>
+		<div class='full-screen-menu'> </div>
+		<div class='menu-options'>
+			<div class='menu-option'>Hub</div>
+			<div class='menu-option'>Account</div>
+		</div>
+		<img class='hub-menu-icon menu-button' src='../res/menu.svg'>
 		<div class='hub-background'> </div>
 		<div class='hub-banner'> </div>
 		<div class='hub-title'>Welcome to the future of customer service.</div>
@@ -85,6 +90,17 @@
 		    pix = Math.pow(pix / 100, 2);
 			if (pix < 20)
 		    	$(".hub-background").css({"-webkit-filter": "blur("+pix+"px)","filter": "blur("+pix+"px)" })
+		});
+
+		var time = 300;
+		$('.menu-button').click(function() {
+			$('.full-screen-menu').fadeIn(time);
+			$('.menu-options').fadeIn(time);
+		});
+
+		$('.full-screen-menu').click(function() {
+			$('.full-screen-menu').fadeOut(time);
+			$('.menu-options').fadeOut(time);
 		});
 	</script>
 </template>

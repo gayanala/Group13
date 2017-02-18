@@ -9,9 +9,15 @@
 		<!-- Autocomplete -->
 		<link rel='stylesheet' href='../css/awesomplete.css'/>
 		<script src='../js/awesomplete.min.js' async></script>
+		<script src='../js/menu-deploy.js' async></script>
 	</head>
 	<body>
-		<img class='menu-icon' src='../res/menu.svg'>
+		<div class='full-screen-menu'> </div>
+		<div class='menu-options'>
+			<div class='menu-option'>Hub</div>
+			<div class='menu-option'>Account</div>
+		</div>
+		<img class='menu-icon menu-button' src='../res/menu.svg'>
 		<div class='splash-banner'>
 			<div class='splash-filter'> </div>
 			<div class='splash-title'>CSG International</div>
@@ -78,18 +84,32 @@
 					{{#each liveVideos}}
 						<div class='video live-video clickable-video' id='{{_id}}'>
 							<img src='{{imageUrl}}' class='clickable-video' id='{{_id}}'/>
-							<div class='video-text text-live clickable-video' id='{{_id}}'>Live Now</div>				
+							<div class='video-text text-live clickable-video' id='{{_id}}'>Live Now</div>
 						</div>
+						<div class='video-title'>{{videoName}}</div>
 					{{/each}}
 					{{#each nonLiveVideos}}
 						<div class='video clickable-video' id='{{_id}}'>
 							<img src='{{imageUrl}}' class="player-position clickable-video" id='{{_id}}'/>
 							<img src="../res/play.svg" class="play-button clickable-video" id='{{_id}}'/>
 						</div>
+						<div class='video-title'>{{videoName}}</div>
 					{{/each}}
 				</div>
 			</div>
 		</div>
 		<div class='footer'>Powered by CSG International</div>
 	</body>
+	<script>
+		var time = 300;
+		$('.menu-button').click(function() {
+			$('.full-screen-menu').fadeIn(time);
+			$('.menu-options').fadeIn(time);
+		});
+
+		$('.full-screen-menu').click(function() {
+			$('.full-screen-menu').fadeOut(time);
+			$('.menu-options').fadeOut(time);
+		});
+	</script>
 </template>
