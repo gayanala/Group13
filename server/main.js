@@ -11,21 +11,11 @@ Meteor.startup(() => {
 	allowAll();
 	publishAll();
 	
+	// Bring in agents methods
 	agentsMethods();
 	
 	// Clear the database (for testing)
 	Agents.remove({});
-	
-	/*
-				firstName: firstName,
-				lastName: lastName,
-				email: email,
-				phoneNumber: phoneNumber,
-				videoLink: videoLink,
-				imageUrl: imageUrl,
-				available: available,
-				waitTime: waitTime
-	*/
 	
 	// Initialize database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 
