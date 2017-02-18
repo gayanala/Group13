@@ -7,7 +7,7 @@
 		<div class='ls-header'>
 			{{> menu}}
 			<img class='ls-menu-icon menu-button' src='../res/menu-black.svg'>
-			<div class='ls-company'>CSG International</div>
+			<div class='ls-company'>{{companyName}}</div>
 		</div>
 		<div>
 			<div class='ls-stream-title'>{{videoName}}</div>
@@ -29,6 +29,11 @@
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
 			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
+			{{#if agentLivestream}}
+				<form id='uploadFileForm'> 
+					Upload: <input class='uploadInput' type='file'>
+				</form>
+			{{/if}}
 			<div class='ls-notes'>
 				<textarea id='notesTextarea'></textarea>
 			</div>

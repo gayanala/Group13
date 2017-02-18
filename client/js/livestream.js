@@ -1,9 +1,11 @@
 import { Agents } from '../../collections/agents.js';
 import { Videos } from '../../collections/videos.js';
-
+import { Companies } from '../../collections/companies.js';
+ 
 Template.livestream.onCreated(function() {
     Meteor.subscribe('Agents');
 	Meteor.subscribe('Videos');
+	Meteor.subscribe('Companies');
 });
 
 Template.livestream.helpers({
@@ -41,6 +43,7 @@ Template.livestream.helpers({
 		
 		return false;
 	},
+  
 	agentId: function() {
 		var video = Videos.findOne({_id: FlowRouter.getParam('id')});
 		
@@ -49,6 +52,20 @@ Template.livestream.helpers({
 			return agent._id;
 		}
 
-		return video.agent._id;
+		return video.agent._id; 
+  },
+    
+	companyName: function() {
+		var company = Companies.findOne({_id: FlowRouter.getParam('companyId')});
+		
+		if(company != undefined) {
+			return company.companyName;
+		}
+	}
+});
+
+Template.livestream.events({
+	'change .uploadInput'(event) {
+		event.target.value = '';
 	}
 });
