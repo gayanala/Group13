@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
+grey = #ddd
+
+set-position(t = auto, r = auto, b = auto, l = auto)
+	position absolute
+	if t != auto
+		top t
+	if r != auto
+		right r
+	if b != auto
+		bottom b
+	if l != auto
+		left l
+
+fix-position(t = auto, r = auto, b = auto, l = auto)
+	position fixed
+	if t != auto
+		top t
+	if r != auto
+		right r
+	if b != auto
+		bottom b
+	if l != auto
+		left l
+
+set-dimension(h = auto, w = auto)
+	if h != auto
+		height h
+	if w != auto
+		width w
+
+center(t = auto, r = auto, b = auto, l = auto)
+	set-position(t, r, b, l)
+	if l != auto
+		margin-right -50%
+		transform translate(-50%, -50%)
+	else if r != auto
+		transform translate(50%, -50%)
+
+html, body
+	margin 0
+	padding 0
+	overflow-x hidden
+
+.live-wrapper
+	set-position(300px, , , 0)
+	set-dimension(600px, 100vw)
+	background grey
+
+.company
+	set-position(16px, 32px, , )
+	font-size 32px
+	font-family 'Open Sans'
