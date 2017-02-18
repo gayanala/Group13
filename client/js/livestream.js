@@ -13,5 +13,19 @@ Template.livestream.helpers({
 		if(video != undefined) {
 			return video.videoName;
 		}
+	},
+	videoUrl: function() {
+		var video = Videos.findOne({_id: FlowRouter.getParam('id')});
+		
+		if(video != undefined) {
+			return video.videoUrl;
+		}
+	},
+	live: function() {
+		var video = Videos.findOne({_id: FlowRouter.getParam('id')});
+		
+		if(video != undefined) {
+			return video.live;
+		}
 	}
 });
