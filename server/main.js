@@ -120,7 +120,7 @@ Meteor.startup(() => {
 		
 		// Video 3
 		Videos.insert({
-			videoName: 'When to Reconcile your Bank Statements',
+			videoName: 'When to Dispute a Bad Claim',
 			live: false,
 			datePublished: new Date(),
 			imageUrl: '/res/hqdefault-4.jpg',
