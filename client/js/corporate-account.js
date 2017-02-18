@@ -6,20 +6,23 @@ Template.corporateAccount.onCreated(function() {
 	Meteor.subscribe('Videos');
 });
 
+var companyId = 0;
+
 Template.corporateAccount.helpers({
-	agents: function(companyId) {
-		allAgents = Agents.find({}).fetch();
+	agents: function() {
+		var allAgents = Agents.find({}).fetch();
+		
 		var agents = [];
 		for(var i = 0; i < allAgents.length; i++) {
 			var agent = allAgents[i];
-			if(agent.companyId == companyId)
-			{
+			if(agent.companyId == companyId) {
 				agents.push(agent)
 			}
-
-		return 
+		}
+		
+		return agents;
 	},
-	liveVideos: function(companyId) {
+	liveVideos: function() {
 		var liveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();		
@@ -33,14 +36,14 @@ Template.corporateAccount.helpers({
 		
 		return liveVideosData;
 	},
-	nonLiveVideos: function(companyId) {
+	nonLiveVideos: function() {
 		var nonLiveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
 			
-			if(!video.live&& video.companyId == companyId ) {
+			if(!video.live && video.companyId == companyId) {
 				nonLiveVideosData.push(video);
 			}
 		}
