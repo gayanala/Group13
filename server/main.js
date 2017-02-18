@@ -155,7 +155,7 @@ Meteor.startup(() => {
 			email: 'jerrod.sigmund@csgi.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
-			imageUrl: '/res/agent5.jpeg',
+			imageUrl: '/res/Person1.jpeg',
 			available: false,
 			waitTime: 2
 		});
@@ -168,7 +168,7 @@ Meteor.startup(() => {
 			email: 'len.slade@csgi.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
-			imageUrl: '/res/agent6.jpeg',
+			imageUrl: '/res/Person2.jpeg',
 			available: true,
 			waitTime: 0
 		});
@@ -177,10 +177,10 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@cox.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
-			imageUrl: '/res/agent1.jpeg',
+			imageUrl: '/res/Person3.jpeg',
 			available: true,
 			waitTime: 0
 		});
@@ -190,10 +190,10 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			email: 'brandon.gene@cox.com',
 			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.support.com/genevideo',
-			imageUrl: '/res/agent2.jpeg',
+			imageUrl: '/res/Person4.jpeg',
 			available: false,
 			waitTime: 11
 		});
@@ -203,10 +203,10 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			email: 'lauren.darrin@cox.com',
 			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.support.com/darrinvideo',
-			imageUrl: '/res/agent3.jpeg',
+			imageUrl: '/res/Person5.jpeg',
 			available: false,
 			waitTime: 4
 		});
@@ -216,10 +216,10 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			email: 'ronald.reagan@cox.com',
 			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.support.com/reaganvideo',
-			imageUrl: '/res/agent4.jpeg',
+			imageUrl: '/res/Person6.jpeg',
 			available: true,
 			waitTime: 0
 		});
@@ -229,10 +229,10 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			email: 'jerrod.sigmund@cox.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
-			imageUrl: '/res/agent5.jpeg',
+			imageUrl: '/res/Person7.jpg',
 			available: false,
 			waitTime: 2
 		});
@@ -242,7 +242,84 @@ Meteor.startup(() => {
 			companyId: coxCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@cox.com',
+			phoneNumber: '(402) 555-1282',
+			videoLink: 'www.support.com/sladevideo',
+			imageUrl: '/res/Person8.jpeg',
+			available: true,
+			waitTime: 0
+		});
+
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Sheila',
+			lastName: 'Bleyhl',
+			email: 'sheila.bleyhl@virginmobile.com',
+			phoneNumber: '(402) 123-4567',
+			videoLink: 'www.support.com/blehylvideo',
+			imageUrl: '/res/Person9.jpeg',
+			available: true,
+			waitTime: 0
+		});
+
+		//Agent 2
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Brandon',
+			lastName: 'Gene',
+			email: 'brandon.gene@virginmobile.com',
+			phoneNumber: '(402) 555-3947',
+			videoLink: 'www.support.com/genevideo',
+			imageUrl: '/res/Person10.jpeg',
+			available: false,
+			waitTime: 11
+		});
+
+		//Agent 3
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Lauren',
+			lastName: 'Darrin',
+			email: 'lauren.darrin@virginmobile.com',
+			phoneNumber: '(402) 555-3129',
+			videoLink: 'www.support.com/darrinvideo',
+			imageUrl: '/res/agent3.jpeg',
+			available: false,
+			waitTime: 4
+		});
+
+		//Agent 4
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Ronald',
+			lastName: 'Reagan',
+			email: 'ronald.reagan@virginmobile.com',
+			phoneNumber: '(402) 555-9394',
+			videoLink: 'www.support.com/reaganvideo',
+			imageUrl: '/res/agent4.jpeg',
+			available: true,
+			waitTime: 0
+		});
+
+		//Agent 5
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Jared',
+			lastName: 'Freud',
+			email: 'jerrod.sigmund@virginmobile.com',
+			phoneNumber: '(402) 555-2010',
+			videoLink: 'www.support.com/sigmundvideo',
+			imageUrl: '/res/agent5.jpeg',
+			available: false,
+			waitTime: 2
+		});
+
+		//Agent 6
+		Agents.insert({
+			companyId: virginCompanyId,
+			firstName: 'Len',
+			lastName: 'Slade',
+			email: 'len.slade@virginmobile.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
@@ -251,87 +328,10 @@ Meteor.startup(() => {
 		});
 
 		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Sheila',
-			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
-			phoneNumber: '(402) 123-4567',
-			videoLink: 'www.support.com/blehylvideo',
-			imageUrl: '/res/agent1.jpeg',
-			available: true,
-			waitTime: 0
-		});
-
-		//Agent 2
-		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Brandon',
-			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
-			phoneNumber: '(402) 555-3947',
-			videoLink: 'www.support.com/genevideo',
-			imageUrl: '/res/agent2.jpeg',
-			available: false,
-			waitTime: 11
-		});
-
-		//Agent 3
-		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Lauren',
-			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
-			phoneNumber: '(402) 555-3129',
-			videoLink: 'www.support.com/darrinvideo',
-			imageUrl: '/res/agent3.jpeg',
-			available: false,
-			waitTime: 4
-		});
-
-		//Agent 4
-		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Ronald',
-			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
-			phoneNumber: '(402) 555-9394',
-			videoLink: 'www.support.com/reaganvideo',
-			imageUrl: '/res/agent4.jpeg',
-			available: true,
-			waitTime: 0
-		});
-
-		//Agent 5
-		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Jared',
-			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
-			phoneNumber: '(402) 555-2010',
-			videoLink: 'www.support.com/sigmundvideo',
-			imageUrl: '/res/agent5.jpeg',
-			available: false,
-			waitTime: 2
-		});
-
-		//Agent 6
-		Agents.insert({
-			companyId: virginCompanyId,
-			firstName: 'Len',
-			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
-			phoneNumber: '(402) 555-1282',
-			videoLink: 'www.support.com/sladevideo',
-			imageUrl: '/res/agent6.jpeg',
-			available: true,
-			waitTime: 0
-		});
-
-		Agents.insert({
 			companyId: verizonCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@verizon.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
@@ -344,7 +344,7 @@ Meteor.startup(() => {
 			companyId: verizonCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			email: 'brandon.gene@verizon.com',
 			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
@@ -357,7 +357,7 @@ Meteor.startup(() => {
 			companyId: verizonCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			email: 'lauren.darrin@verizon.com',
 			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
@@ -370,7 +370,7 @@ Meteor.startup(() => {
 			companyId: verizonCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			email: 'ronald.reagan@verizon.com',
 			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
@@ -383,7 +383,7 @@ Meteor.startup(() => {
 			companyId: verizonCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			email: 'jerrod.sigmund@verizon.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
@@ -396,7 +396,7 @@ Meteor.startup(() => {
 			companyId: verizonCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@verizon.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
@@ -408,7 +408,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@charter.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
@@ -421,7 +421,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			email: 'brandon.gene@charter.com',
 			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
@@ -434,7 +434,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			email: 'lauren.darrin@charter.com',
 			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
@@ -447,7 +447,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			email: 'ronald.reagan@charter.com',
 			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
@@ -460,7 +460,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			email: 'jerrod.sigmund@charter.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
@@ -473,7 +473,7 @@ Meteor.startup(() => {
 			companyId: charterCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@charter.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
@@ -485,7 +485,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@dishnetwork.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
@@ -498,7 +498,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			email: 'brandon.gene@dishnetwork.com',
 			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
@@ -511,7 +511,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			email: 'lauren.darrin@dishnetwork.com',
 			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
@@ -524,7 +524,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			email: 'ronald.reagan@dishnetwork.com',
 			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
@@ -537,7 +537,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			email: 'jerrod.sigmund@dishnetwork.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
@@ -550,7 +550,7 @@ Meteor.startup(() => {
 			companyId: dishCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@dishnetwork.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
@@ -562,7 +562,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@comcast.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
@@ -575,7 +575,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			email: 'brandon.gene@comcast.com',
 			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
@@ -588,7 +588,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Lauren', 
 			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			email: 'lauren.darrin@comcast.com',
 			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
@@ -601,7 +601,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			email: 'ronald.reagan@comcast.com',
 			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
@@ -614,7 +614,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			email: 'jerrod.sigmund@comcast.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
@@ -627,7 +627,7 @@ Meteor.startup(() => {
 			companyId: comcastCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@comcast.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
@@ -639,10 +639,10 @@ Meteor.startup(() => {
 			companyId: penskeCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@csgi.com',
+			email: 'sheila.bleyhl@penske.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.support.com/blehylvideo',
-			imageUrl: '/res/agent1.jpeg',
+			imageUrl: '/res/Girl3.jpg',
 			available: true,
 			waitTime: 0
 		});
@@ -650,12 +650,12 @@ Meteor.startup(() => {
 		//Agent 2
 		Agents.insert({
 			companyId: penskeCompanyId,
-			firstName: 'Brandon',
-			lastName: 'Gene',
-			email: 'brandon.gene@csgi.com',
+			firstName: 'Lizzy',
+			lastName: 'Jacobsen',
+			email: 'lizzy.jacobsen@penske.com',
 			phoneNumber: '(402) 555-3947',
-			videoLink: 'www.support.com/genevideo',
-			imageUrl: '/res/agent2.jpeg',
+			videoLink: 'www.support.com/jacobsenvideo',
+			imageUrl: '/res/Girl2.jpg',
 			available: false,
 			waitTime: 11
 		});
@@ -663,12 +663,12 @@ Meteor.startup(() => {
 		//Agent 3
 		Agents.insert({
 			companyId: penskeCompanyId,
-			firstName: 'Lauren',
-			lastName: 'Darrin',
-			email: 'lauren.darrin@csgi.com',
+			firstName: 'Jordan',
+			lastName: 'Swift',
+			email: 'jordan.swift@penske.com',
 			phoneNumber: '(402) 555-3129',
-			videoLink: 'www.support.com/darrinvideo',
-			imageUrl: '/res/agent3.jpeg',
+			videoLink: 'www.support.com/swiftvideo',
+			imageUrl: '/res/Girl1.jpeg',
 			available: false,
 			waitTime: 4
 		});
@@ -676,11 +676,11 @@ Meteor.startup(() => {
 		//Agent 4
 		Agents.insert({
 			companyId: penskeCompanyId,
-			firstName: 'Ronald',
-			lastName: 'Reagan',
-			email: 'ronald.reagan@csgi.com',
+			firstName: 'Spencer',
+			lastName: 'Nussrallah',
+			email: 'spencer.nussrallah@penske.com',
 			phoneNumber: '(402) 555-9394',
-			videoLink: 'www.support.com/reaganvideo',
+			videoLink: 'www.support.com/nussrallahvideo',
 			imageUrl: '/res/agent4.jpeg',
 			available: true,
 			waitTime: 0
@@ -689,11 +689,11 @@ Meteor.startup(() => {
 		//Agent 5
 		Agents.insert({
 			companyId: penskeCompanyId,
-			firstName: 'Jared',
-			lastName: 'Freud',
-			email: 'jerrod.sigmund@csgi.com',
+			firstName: 'Matt',
+			lastName: 'Meacham',
+			email: 'matt.meacham@penske.com',
 			phoneNumber: '(402) 555-2010',
-			videoLink: 'www.support.com/sigmundvideo',
+			videoLink: 'www.support.com/meachamvideo',
 			imageUrl: '/res/agent5.jpeg',
 			available: false,
 			waitTime: 2
@@ -704,10 +704,10 @@ Meteor.startup(() => {
 			companyId: penskeCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@csgi.com',
+			email: 'len.slade@penske.com',
 			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.support.com/sladevideo',
-			imageUrl: '/res/agent6.jpeg',
+			imageUrl: '/res/Man1.jpeg',
 			available: true,
 			waitTime: 0
 		});
