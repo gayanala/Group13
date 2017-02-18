@@ -1,10 +1,12 @@
 import { Meteor } from 'meteor/meteor';
 
 import { Agents } from '../collections/agents.js';
+import { Videos } from '../collections/videos.js';
 
 import { publishAll } from './publish.js';
 import { allowAll } from './allow.js';
 import { agentsMethods } from './agentsMethods.js'
+import { videosMethods } from './videosMethods.js';
 
 
 Meteor.startup(() => {
@@ -13,8 +15,10 @@ Meteor.startup(() => {
 	
 	// Bring in agents methods
 	agentsMethods();
+	videosMethods();
 	
 	// Clear the databases (for testing)
+	Videos.remove({});
 	Agents.remove({});
 	
 	// Initialize the Agents database (for testing)
@@ -25,7 +29,7 @@ Meteor.startup(() => {
 			lastName: 'Bleyhl',
 			email: 'sheila.bleyhl@csgi.com',
 			phoneNumber: '(402) 123-4567',
-			videoLink: 'www.link.com/blehylvideo',
+			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
 			available: true,
 			waitTime: 0
@@ -37,7 +41,7 @@ Meteor.startup(() => {
 			lastName: 'Gene',
 			email: 'brandon.gene@csgi.com',
 			phoneNumber: '(402) 555-3947',
-			videoLink: 'www.link.com/genevideo',
+			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
 			available: false,
 			waitTime: 11
@@ -49,7 +53,7 @@ Meteor.startup(() => {
 			lastName: 'Darrin',
 			email: 'lauren.darrin@csgi.com',
 			phoneNumber: '(402) 555-3129',
-			videoLink: 'www.link.com/darrinvideo',
+			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
 			available: false,
 			waitTime: 4
@@ -61,7 +65,7 @@ Meteor.startup(() => {
 			lastName: 'Reagan',
 			email: 'ronald.reagan@csgi.com',
 			phoneNumber: '(402) 555-9394',
-			videoLink: 'www.link.com/reaganvideo',
+			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
 			available: true,
 			waitTime: 0
@@ -73,7 +77,7 @@ Meteor.startup(() => {
 			lastName: 'Freud',
 			email: 'jerrod.sigmund@csgi.com',
 			phoneNumber: '(402) 555-2010',
-			videoLink: 'www.link.com/sigmundvideo',
+			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
 			available: false,
 			waitTime: 2
@@ -85,10 +89,49 @@ Meteor.startup(() => {
 			lastName: 'Slade',
 			email: 'len.slade@csgi.com',
 			phoneNumber: '(402) 555-1282',
-			videoLink: 'www.link.com/sladevideo',
+			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
 			available: true,
 			waitTime: 0
+		});
+	}
+	
+	// Initialize the Videos database (for testing)
+	if(Videos.find({}).fetch().length <= 0) {
+		// Video 1
+		Videos.insert({
+			videoName: 'How to Check Bills Online',
+			live: true,
+			datePublished: new Date(),
+			imageUrl: '/res/hqdefault-3.jpg',
+			agent: Agents.find({}).fetch()[0]
+		});
+		
+		// Video 2
+		Videos.insert({
+			videoName: 'How to Set Up Automatic Billing',
+			live: false,
+			datePublished: new Date(),
+			imageUrl: '/res/hqdefault.jpg',
+			agent: Agents.find({}).fetch()[1]
+		});
+		
+		// Video 3
+		Videos.insert({
+			videoName: 'When to Reconcile your Bank Statements',
+			live: false,
+			datePublished: new Date(),
+			imageUrl: '/res/hqdefault-4.jpg',
+			agent: Agents.find({}).fetch()[2]
+		});
+		
+		// Video 4
+		Videos.insert({
+			videoName: 'Finding your Account Number',
+			live: false,
+			datePublished: new Date(),
+			imageUrl: '/res/hqdefault-2.jpg',
+			agent: Agents.find({}).fetch()[3]
 		});
 	}
 });
