@@ -69,14 +69,14 @@ Meteor.startup(() => {
 		
 		//Agent 5
 		Agents.insert({
-			firstName: 'Jerrod',
-			lastName: 'Sigmund',
+			firstName: 'Jared',
+			lastName: 'Freud',
 			email: 'jerrod.sigmund@csgi.com',
 			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.link.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
 			available: false,
-			waitTime: 123
+			waitTime: 2
 		});
 		
 		//Agent 6
