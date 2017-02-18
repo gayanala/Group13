@@ -38,6 +38,36 @@ center(t = auto, r = auto, b = auto, l = auto)
 	else if r != auto
 		transform translate(50%, -50%)
 
+.full-screen-menu
+	display none
+	set-dimension(100vh, 100vw)
+	fix-position(0, , , 0)
+	background #3299ff
+	opacity 0.9
+	z-index 100
+
+	&:hover
+		cursor pointer
+
+.menu-options
+	display none
+	color white
+	center(50%, , , 50%)
+	position fixed
+	font-family 'Open Sans'
+	font-size 48px
+	z-index 101
+	font-weight 300
+	text-align center
+	border 1px solid white
+	padding 0 64px
+
+.menu-option
+	margin 48px 0
+
+	&:hover
+		cursor pointer
+
 html, body
 	margin 0
 	padding 0
@@ -128,7 +158,7 @@ html, body
 	font-family 'Open Sans', sans
 
 .agent
-	set-dimension(200px, 95%)
+	set-dimension(200px, 100%)
 	border 2px solid grey
 	background white
 	margin 16px 0
@@ -197,7 +227,7 @@ html, body
 .video
 	set-dimension(265px, 65%)
 	background grey
-	margin 24px 0
+	margin 24px 0 12px 0
 	position relative
 	overflow-x hidden
 	overflow-y hidden
@@ -219,6 +249,11 @@ html, body
 	text-align center
 	font-weight bold
 	max-width 50%
+
+.video-title
+	font-family 'Open Sans'
+	font-size 24px
+	margin-bottom 24px
 
 .text-live
 	color white
