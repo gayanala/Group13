@@ -45,19 +45,19 @@
 		$(document).ready(function() {
 			$('.hub-title').delay(500).fadeIn();
 			$('.hub-title-highlight').delay(750).animate({'width': '750px'}, 300);
-		});
 
-		$('.card').hover(function() {
-			$(this).css({
-				'background-size': '175%',
-				'color': '#3299ff',
-				'transition': 'all 0.25s'
-			});
-		}, function() {
-			$(this).css({
-				'background-size': '150%',
-				'color': 'white',
-				'transition': 'all 0.25s'
+			$('.card').hover(function() {
+				$(this).css({
+					'background-size': '175%',
+					'color': '#3299ff',
+					'transition': 'all 0.25s'
+				});
+			}, function() {
+				$(this).css({
+					'background-size': '150%',
+					'color': 'white',
+					'transition': 'all 0.25s'
+				});
 			});
 		});
 
