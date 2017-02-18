@@ -7,31 +7,40 @@ Template.corporateAccount.onCreated(function() {
 });
 
 Template.corporateAccount.helpers({
-	agents: function() {
-		return Agents.find({}).fetch();
+	agents: function(companyId) {
+		allAgents = Agents.find({}).fetch();
+		var agents = [];
+		for(var i = 0; i < allAgents.length; i++) {
+			var agent = allAgents[i];
+			if(agent.companyId == companyId)
+			{
+				agents.push(agent)
+			}
+
+		return 
 	},
-	liveVideos: function() {
+	liveVideos: function(companyId) {
 		var liveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();		
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
 									
-			if(video.live) {
+			if(video.live && video.companyId == companyId) {
 				liveVideosData.push(video);
 			}
 		}
 		
 		return liveVideosData;
 	},
-	nonLiveVideos: function() {
+	nonLiveVideos: function(companyId) {
 		var nonLiveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
 			
-			if(!video.live) {
+			if(!video.live&& video.companyId == companyId ) {
 				nonLiveVideosData.push(video);
 			}
 		}

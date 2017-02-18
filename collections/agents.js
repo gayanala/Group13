@@ -3,6 +3,11 @@ import { Mongo } from 'meteor/mongo';
 export const Agents = new Mongo.Collection('Agents');
 
 export const AgentSchema = new SimpleSchema({
+	companyId: {
+		type: Number,
+		label: 'Company ID',
+		optional: false
+	},
 	firstName: {
 		type: String,
 		label: 'First Name',
