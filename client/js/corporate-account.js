@@ -71,7 +71,9 @@ Template.corporateAccount.helpers({
 Template.corporateAccount.events({
 	'click .clickable-video'(event) {
 		event.preventDefault();
-		FlowRouter.go("/livestream/" + event.target.id);
+		
+		var companyId = FlowRouter.getParam('companyId');
+		FlowRouter.go("/" + companyId + "/livestream/" + event.target.id);
 		scroll(0, 0); // Will scroll it to the top of page
 	}
 });
