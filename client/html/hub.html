@@ -22,40 +22,20 @@
 				<img class='hub-search-icon' src='../res/search.svg'>
 			</div>
 			<div class='card-wrapper'>
-				<div class='card penske'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Penske</div>
-				</div>
-				<div class='card comcast'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Comcast</div>
-				</div>
-				<div class='card dish'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Dish Network</div>
-				</div>
-				<div class='card cox'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>CSG International</div>
-				</div>
+				{{#each firstFourCompanies}}
+					<div class='card {{className}}' id='{{_id}}'>
+						<div class='card-filter' id='{{_id}}'> </div>
+						<div class='card-title' id='{{_id}}'>{{companyName}}</div>
+					</div>
+				{{/each}}
 			</div>
 			<div class='card-wrapper'>
-				<div class='card dish'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Dish Network</div>
-				</div>
-				<div class='card cox'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>CSG International</div>
-				</div>
-				<div class='card penske'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Penske</div>
-				</div>
-				<div class='card comcast'>
-					<div class='card-filter'> </div>
-					<div class='card-title'>Comcast</div>
-				</div>
+				{{#each secondFourCompanies}}
+					<div class='card {{className}}' id='{{_id}}'>
+						<div class='card-filter' id='{{_id}}'> </div>
+						<div class='card-title' id='{{_id}}'>{{companyName}}</div>
+					</div>
+				{{/each}}
 			</div>
 			<div class='encouragement'>Get the help you need in the most convenient way.</div>
 			<div class='footer'>Powered by CSG International</div>
