@@ -14,16 +14,16 @@ Meteor.startup(() => {
 	// Bring in agents methods
 	agentsMethods();
 	
-	// Clear the database (for testing)
+	// Clear the databases (for testing)
 	Agents.remove({});
 	
-	// Initialize database (for testing)
+	// Initialize the Agents database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 
 		//Agent 1
 		Agents.insert({
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
-			email: 'sheila.bleyhl@dish.com',
+			email: 'sheila.bleyhl@csgi.com',
 			phoneNumber: '(402) 123-4567',
 			videoLink: 'www.link.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
@@ -35,8 +35,8 @@ Meteor.startup(() => {
 		Agents.insert({
 			firstName: 'Brandon',
 			lastName: 'Gene',
-			email: 'brandon.gene@dish.com',
-			phoneNumber: '(402) 123-4567',
+			email: 'brandon.gene@csgi.com',
+			phoneNumber: '(402) 555-3947',
 			videoLink: 'www.link.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
 			available: false,
@@ -47,8 +47,8 @@ Meteor.startup(() => {
 		Agents.insert({
 			firstName: 'Lauren',
 			lastName: 'Darrin',
-			email: 'lauren.darrin@dish.com',
-			phoneNumber: '(402) 123-4567',
+			email: 'lauren.darrin@csgi.com',
+			phoneNumber: '(402) 555-3129',
 			videoLink: 'www.link.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
 			available: false,
@@ -59,8 +59,8 @@ Meteor.startup(() => {
 		Agents.insert({
 			firstName: 'Ronald',
 			lastName: 'Reagan',
-			email: 'ronald.reagan@dish.com',
-			phoneNumber: '(402) 123-4567',
+			email: 'ronald.reagan@csgi.com',
+			phoneNumber: '(402) 555-9394',
 			videoLink: 'www.link.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
 			available: true,
@@ -71,8 +71,8 @@ Meteor.startup(() => {
 		Agents.insert({
 			firstName: 'Jerrod',
 			lastName: 'Sigmund',
-			email: 'jerrod.sigmund@dish.com',
-			phoneNumber: '(402) 123-4567',
+			email: 'jerrod.sigmund@csgi.com',
+			phoneNumber: '(402) 555-2010',
 			videoLink: 'www.link.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
 			available: false,
@@ -83,8 +83,8 @@ Meteor.startup(() => {
 		Agents.insert({
 			firstName: 'Len',
 			lastName: 'Slade',
-			email: 'len.slade@dish.com',
-			phoneNumber: '(402) 123-4567',
+			email: 'len.slade@csgi.com',
+			phoneNumber: '(402) 555-1282',
 			videoLink: 'www.link.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
 			available: true,
