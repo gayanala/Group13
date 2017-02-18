@@ -5,9 +5,6 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-.csg-header {
-  width: 100vw;
-}
 .menu-icon {
   position: absolute;
   top: 32px;
@@ -17,7 +14,17 @@ body {
   height: 500px;
   width: 100vw;
   position: relative;
-  background: #ededed;
+  background: #ddd;
+  background: url("../res/meeting.jpg") no-repeat center center;
+  background-size: cover;
+}
+.splash-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
 }
 .splash-title {
   position: absolute;
@@ -46,20 +53,33 @@ body {
   width: 70%;
   border-radius: 32px;
   background: #fff;
-  border: 2px solid #ededed;
+  border: 3px solid #ddd;
   padding: 12px;
   box-sizing: border-box;
   position: relative;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
 }
 .search-bar:hover {
   cursor: text;
 }
-.search-icon {
-  display: none;
-}
 .search-form {
-  display: none;
+  width: 90%;
+}
+.search-query {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 24px;
+}
+.search-query::-webkit-input-placeholder {
+  color: #ddd;
+}
+.search-icon {
+  width: 64px;
 }
 .active-agents-list {
   padding: 48px;
@@ -74,8 +94,8 @@ body {
 }
 .agent {
   height: 200px;
-  width: 100%;
-  border: 2px solid #ededed;
+  width: 90%;
+  border: 2px solid #ddd;
   background: #fff;
   margin: 16px 0;
   display: flex;
@@ -83,28 +103,54 @@ body {
 .agent-photo {
   height: 100%;
 }
+.agent-photo:hover {
+  cursor: pointer;
+}
 .agent-information {
   padding: 16px 32px;
   flex-grow: 1;
   font-family: 'Open Sans', sans;
 }
-.agent-name {
-  font-size: 28px;
-  font-weight: 700;
+.agent-row {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-.agent-availability {
+.agent-row:hover {
+  cursor: pointer;
+}
+.agent-row .image {
+  margin: 0 16px;
+}
+.agent-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 16px;
+}
+.agent-availability,
+.agent-unavailability {
   padding: 4px 24px;
   color: #fff;
   border-radius: 32px;
+}
+.agent-availability:hover,
+.agent-unavailability:hover {
+  cursor: pointer;
+}
+.agent-availability {
   background: #008000;
 }
+.agent-unavailability {
+  background: #f00;
+}
 .right-column {
-  flex-grow: 1;
+  flex-grow: 2;
   padding: 48px 24px;
   box-sizing: border-box;
 }
 .video-feed {
-  border: 2px solid #ededed;
+  border: 2px solid #ddd;
   padding: 24px 0;
   display: flex;
   align-items: center;
@@ -113,7 +159,7 @@ body {
 .video {
   height: 250px;
   width: 80%;
-  background: #ededed;
+  background: #ddd;
   margin: 24px 0;
   position: relative;
 }
@@ -123,7 +169,7 @@ body {
 .divider {
   height: 2px;
   width: 80%;
-  background: #ededed;
+  background: #ddd;
   margin: 24px 0;
 }
 .video-text {

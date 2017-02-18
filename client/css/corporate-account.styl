@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
-grey = #EDEDED
+grey = #ddd
 
 set-position(t = auto, r = auto, b = auto, l = auto)
 	position absolute
@@ -42,9 +42,6 @@ html, body
 	padding 0
 	overflow-x hidden
 
-.csg-header
-	set-dimension(, 100vw)
-
 .menu-icon
 	set-position(32px, 32px)
 
@@ -52,6 +49,13 @@ html, body
 	set-dimension(500px, 100vw)
 	position relative
 	background grey
+	background url('../res/meeting.jpg') no-repeat center center
+	background-size cover
+
+.splash-filter
+	set-position(0, , , 0)
+	set-dimension(100%, 100%)
+	background rgba(0, 0, 0, 0.2)
 
 .splash-title
 	center(50%, , , 50%)
@@ -75,20 +79,32 @@ html, body
 	set-dimension(64px, 70%)
 	border-radius 32px
 	background white
-	border 2px solid grey
+	border 3px solid grey
 	padding 12px
 	box-sizing border-box
 	position relative
 	margin-bottom 16px
+	display flex
+	justify-content flex-end
 
 	&:hover
 		cursor text
 
-.search-icon
-	display none
-
 .search-form
-	display none
+	set-dimension(, 90%)
+
+.search-query
+	set-dimension(100%, 100%)
+	border none
+	outline none
+	text-align right
+	font-size 24px
+
+	&::-webkit-input-placeholder
+		color grey
+
+.search-icon
+	set-dimension(, 64px)
 
 .active-agents-list
 	padding 48px
@@ -102,7 +118,7 @@ html, body
 	font-family 'Open Sans', sans
 
 .agent
-	set-dimension(200px, 100%)
+	set-dimension(200px, 90%)
 	border 2px solid grey
 	background white
 	margin 16px 0
@@ -111,23 +127,46 @@ html, body
 .agent-photo
 	set-dimension(100%, )
 
+	&:hover
+		cursor pointer
+
 .agent-information
 	padding 16px 32px
 	flex-grow 1
 	font-family 'Open Sans', sans
 
-.agent-name
-	font-size 28px
-	font-weight 700
+.agent-row
+	set-dimension(44px, 100%)
+	display flex
+	align-items center
 
-.agent-availability
+	&:hover
+		cursor pointer
+
+.agent-row .image
+	margin 0 16px
+
+.agent-name
+	font-size 32px
+	font-weight 700
+	margin-right 16px
+
+.agent-availability, .agent-unavailability
 	padding 4px 24px
 	color white
 	border-radius 32px
+
+	&:hover
+		cursor pointer
+
+.agent-availability
 	background green
 
+.agent-unavailability
+	background red
+
 .right-column
-	flex-grow 1
+	flex-grow 2
 	padding 48px 24px
 	box-sizing border-box
 
