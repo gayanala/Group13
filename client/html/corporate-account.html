@@ -40,10 +40,10 @@
 					</form>
 					<img class='search-icon' src='../res/search.svg'>
 				</div>
-
 				<div class='active-agents-list'>
 					<div class='active-agents-title'>Active Agents</div>
 					{{#each agents}}
+
 						<div class='agent'>
 							<img class='agent-photo' src='{{imageUrl}}'>
 							<div class='agent-information'>
@@ -52,7 +52,7 @@
 									{{#if available}}
 										<span class='agent-availability'>Available</span>
 									{{else}}
-										<span class='agent-unavailability'>Estimated Wait Time: {{waitTime}} Minutes</span>
+										<span class='agent-unavailability' id={{firstName}}>Estimated Wait Time: {{waitTime}} Minutes</span>
 									{{/if}}
 								</div>
 								<div class='agent-row'>
