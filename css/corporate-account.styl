@@ -1,0 +1,39 @@
+set-position(t = auto, r = auto, b = auto, l = auto)
+	position absolute
+	if t != auto
+		top t
+	if r != auto
+		right r
+	if b != auto
+		bottom b
+	if l != auto
+		left l
+
+fix-position(t = auto, r = auto, b = auto, l = auto)
+	position fixed
+	if t != auto
+		top t
+	if r != auto
+		right r
+	if b != auto
+		bottom b
+	if l != auto
+		left l
+
+set-dimension(h = auto, w = auto)
+	if h != auto
+		height h
+	if w != auto
+		width w
+
+center(t = auto, r = auto, b = auto, l = auto)
+	set-position(t, r, b, l)
+	if l != auto
+		margin-right -50%
+		transform translate(-50%, -50%)
+	else if r != auto
+		transform translate(50%, -50%)
+
+.csg-header
+	set-dimension(, 100%)
+	
