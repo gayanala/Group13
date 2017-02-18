@@ -36,14 +36,15 @@
 			{{/if}}
 			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
 			<div class='ls-notes'>
-				<textarea id='notesTextarea'></textarea>
+				 {{> froalaReactive}}
 			</div>
 		</div>
 	</body>
 	<script>
 		function saveTextAsFile() {
-			var textToWrite = document.getElementById('notesTextarea').value;
-			var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+			var htmlText = $('froala-reactive-meteorized').froalaEditor('html.get');
+			//var htmlText = $('#documentEditField').froalaEditor('html.get');
+			var textFileAsBlob = new Blob([htmlText], {type:'text/plain'});
 			var fileNameToSaveAs = 'Notes.txt';
 
 			var downloadLink = document.createElement("a");
