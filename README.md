@@ -11,8 +11,8 @@ together and solve problems.
 
 This site enables customer service representatives to livestream video to customers in need or to post videos regarding frequently asked 
 questions -- there is no easier way to get information than to be told allowed. A phone call is impersonal and often involves robots and the
-iconic lady computer voice. **We ditched all that.** We set out to put the personality back into customer service and there is no better way
-to do that than face-to-face.
+iconic lady-computer voice. **We ditched all that.** We set out to put the personality back into customer service and there is no better way
+to do that than face-to-face. 
 
 ## Technology
 Front End:
