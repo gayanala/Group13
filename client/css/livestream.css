@@ -109,3 +109,23 @@
   width: 80%;
   background: #ddd;
 }
+.ls-notes textarea {
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  font-family: 'Open Sans';
+}
+.download-notes {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Open Sans';
+  background: #36454f;
+  padding: 12px 36px;
+  border-radius: 48px;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.download-notes:hover {
+  cursor: pointer;
+}
