@@ -43,7 +43,12 @@ html, body
 	overflow-x hidden
 
 .menu-icon
-	set-position(32px, 32px)
+	set-position(32px, , , 32px)
+	set-dimension(32px, )
+	z-index 1
+
+	&:hover
+		cursor pointer
 
 .splash-banner
 	set-dimension(500px, 100vw)
@@ -64,6 +69,10 @@ html, body
 	color white
 	font-weight 700
 
+.splash-padding
+	set-dimension(25px, 100vw)
+	background #36454f
+
 .account-content
 	display flex
 
@@ -76,7 +85,7 @@ html, body
 	flex-direction column
 
 .search-bar
-	set-dimension(64px, 70%)
+	set-dimension(64px, 80%)
 	border-radius 32px
 	background white
 	border 3px solid grey
@@ -198,3 +207,13 @@ html, body
 	font-size 28px
 	text-align center
 	max-width 40%
+
+.footer
+	set-dimension(200px, 100vw)
+	display flex
+	align-items center
+	justify-content center
+	font-size 24px
+	color white
+	font-family 'Open Sans'
+	background #36454F
