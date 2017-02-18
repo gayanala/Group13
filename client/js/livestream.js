@@ -42,3 +42,9 @@ Template.livestream.helpers({
 		return false;
 	}
 });
+
+Template.livestream.events({
+	'change .uploadInput'(event) {
+		event.target.value = '';
+	}
+});

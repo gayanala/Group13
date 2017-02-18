@@ -29,6 +29,11 @@
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
 			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
+			{{#if agentLivestream}}
+				<form id='uploadFileForm'> 
+					Upload: <input class='uploadInput' type='file'>
+				</form>
+			{{/if}}
 			<div class='ls-notes'>
 				<textarea id='notesTextarea'></textarea>
 			</div>
