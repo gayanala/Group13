@@ -10,7 +10,7 @@ a central hub for all customer service interactions -- a social media platform w
 together and solve problems. 
 
 This site enables customer service representatives to livestream video to customers in need or to post videos regarding frequently asked 
-questions -- there is no easier way to get information than to be told allowed. A phone call is impersonal and often involves robots and the
+questions -- there is no easier way to get information than to be told aloud. A phone call is impersonal and often involves robots and the
 iconic lady-computer voice. **We ditched all that.** We set out to put the personality back into customer service and there is no better way
 to do that than face-to-face. 
 
