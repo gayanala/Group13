@@ -10,6 +10,7 @@ import { videosMethods } from './videosMethods.js';
 
 
 Meteor.startup(() => {
+	// Set up publish model
 	allowAll();
 	publishAll();
 	
