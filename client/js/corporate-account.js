@@ -1,31 +1,43 @@
 import { Agents } from '../../collections/agents.js';
-
+import { Videos } from '../../collections/videos.js';
 
 Template.corporateAccount.onCreated(function() {
     Meteor.subscribe('Agents');
+	Meteor.subscribe('Videos');
 });
 
 Template.corporateAccount.helpers({
 	agents: function() {
-		var agentData = [];
-
-		var allAgents = Agents.find({}).fetch();
-		for(var i = 0; i < allAgents.length; i++) {
-			var agent = allAgents[i];
-
-			agentData.push({
-				agentId: agent._id,
-				firstName: agent.firstName,
-				lastName: agent.lastName,
-				email: agent.email,
-				phoneNumber: agent.phoneNumber,
-				videoLink: agent.videoLink,
-				imageUrl: agent.imageUrl,
-				available: agent.available,
-				waitTime: agent.waitTime
-			});
+		return Agents.find({}).fetch();
+	},
+	liveVideos: function() {
+		var liveVideosData = [];
+		
+		var allVideos = Videos.find({}).fetch();
+		for(var i = 0; i < allVideos.length; i++) {
+			var video = allVideos[i];
+			
+			console.log(video.live);
+			
+			if(video.live) {
+				liveVideosData.push(video);
+			}
 		}
 		
-		return agentData;
+		return liveVideosData;
+	},
+	nonLiveVideos: function() {
+		var nonLiveVideosData = [];
+		
+		var allVideos = Videos.find({}).fetch();
+		for(var i = 0; i < allVideos.length; i++) {
+			var video = allVideos[i];
+			
+			if(!video.live) {
+				nonLiveVideosData.push(video);
+			}
+		}
+		
+		return nonLiveVideosData;
 	}
 });
