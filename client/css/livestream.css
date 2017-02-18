@@ -129,6 +129,11 @@
 .download-notes:hover {
   cursor: pointer;
 }
+
+.froala-reactive-meteorized, .fr-wrapper {
+	height: 90%;
+}
+
 .uploadInput {
   display: none;
 }
