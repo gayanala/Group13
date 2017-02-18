@@ -138,6 +138,22 @@
   background: url("../res/cox.jpg") no-repeat center center;
   background-size: 150%;
 }
+.verizon {
+  background: url("../res/130612-F-XX000-002.JPG") no-repeat center center;
+  background-size: 150%;
+}
+.charter {
+  background: url("../res/478467000.jpg") no-repeat center center;
+  background-size: 150%;
+}
+.virgin {
+  background: url("../res/1.jpg") no-repeat center center;
+  background-size: 150%;
+}
+.csg {
+  background: url("../res/central-park-01-marley-white__x_large.jpg") no-repeat center center;
+  background-size: 150%;
+}
 .encouragement {
   color: #36454f;
   font-family: 'Open Sans';

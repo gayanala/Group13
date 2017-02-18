@@ -32,7 +32,7 @@ Meteor.startup(() => {
 		Companies.insert({
 			companyName: 'CSG International',
 			shortName: 'CSGi',
-			className: 'cox'
+			className: 'csg'
 		});
 		//Company 2
 		Companies.insert({
@@ -59,28 +59,28 @@ Meteor.startup(() => {
 		Companies.insert({
 			companyName: 'Cox Communications',
 			shortName: 'Cox',
-			className: 'penske'
+			className: 'cox'
 		});
 
 		//Company 6
 		Companies.insert({
 			companyName: 'Charter Communications',
 			shortName: 'Charter',
-			className: 'dish'
+			className: 'charter'
 		});
 
 		//Company 7
 		Companies.insert({
 			companyName: 'Verizon Wireless',
 			shortName: 'Verizon',
-			className: 'cox'
+			className: 'verizon'
 		});
 
 		//Company 8
 		Companies.insert({
 			companyName: 'Virgin Mobile',
 			shortName: 'Virgin Mobile',
-			className: 'comcast'
+			className: 'virgin'
 		});
 	}
 
