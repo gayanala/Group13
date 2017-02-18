@@ -22,6 +22,10 @@ Template.corporateAccount.helpers({
 			}
 		}
 		
+		agents.sort(function(a, b) {
+			return a.waitTime - b.waitTime;
+		});
+		
 		return agents;
 	},
 	liveVideos: function() {
