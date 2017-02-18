@@ -28,18 +28,18 @@
 		</div>
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
-			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
 			{{#if agentLivestream}}
-				<form id='uploadFileForm'> 
-					Upload: <input class='uploadInput' type='file'>
+				<form id='uploadFileForm'>
+					<input class='uploadInput' type='file' name='file' id='file'>
+					<label for='file' class='file-upload'>Upload file</label>
 				</form>
 			{{/if}}
+			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
 			<div class='ls-notes'>
 				<textarea id='notesTextarea'></textarea>
 			</div>
 		</div>
 	</body>
-
 	<script>
 		function saveTextAsFile() {
 			var textToWrite = document.getElementById('notesTextarea').value;
