@@ -4,7 +4,7 @@ export const Agents = new Mongo.Collection('Agents');
 
 export const AgentSchema = new SimpleSchema({
 	companyId: {
-		type: Number,
+		type: String,
 		label: 'Company ID',
 		optional: false
 	},

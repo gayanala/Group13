@@ -4,7 +4,7 @@ import { Videos } from '../collections/videos.js';
 
 export function videosMethods() {
 	Meteor.methods({
-		'createVideo':function(companyId, videoName, live, datePublished, imageUrl, agent) {
+		'createVideo':function(videoName, companyId, live, datePublished, imageUrl, agent) {
 			var videoObject = {
 				companyId: companyId,
 				videoName: videoName,
@@ -19,7 +19,7 @@ export function videosMethods() {
 		'removeVideo':function(videoId) {
 			Videos.remove(videoId);
 		}, 
-		'updateVideo':function(companyId, videoId, videoName, live, datePublished, imageUrl, agent) {
+		'updateVideo':function(videoId, companyId, videoName, live, datePublished, imageUrl, agent) {
 			Videos.update({_id: videoId}, {
 				$set: {
 					companyId: companyId,

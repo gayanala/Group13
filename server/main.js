@@ -2,11 +2,13 @@ import { Meteor } from 'meteor/meteor';
 
 import { Agents } from '../collections/agents.js';
 import { Videos } from '../collections/videos.js';
+import { Companies } from '../collections/companies.js';
 
 import { publishAll } from './publish.js';
 import { allowAll } from './allow.js';
 import { agentsMethods } from './agentsMethods.js'
 import { videosMethods } from './videosMethods.js';
+import { companiesMethods } from './companiesMethods.js';
 
 
 Meteor.startup(() => {
@@ -17,10 +19,28 @@ Meteor.startup(() => {
 	// Bring in agents methods
 	agentsMethods();
 	videosMethods();
+	companiesMethods();
 	
 	// Clear the databases (for testing)
 	Videos.remove({});
 	Agents.remove({});
+	Companies.remove({});
+	
+	// Initialize the Companies database (for testing)
+	if(Companies.find({}).fetch().length <= 0) {
+		//Company 1
+		Companies.insert({
+			companyName: 'CSG International',
+			shortName: 'CSGi'
+		});
+		//Company 2
+		Companies.insert({
+			companyName: 'Penske',
+			shortName: 'Penske'
+		});
+		
+		//Company 3
+	}
 	
 	// Initialize the Agents database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 

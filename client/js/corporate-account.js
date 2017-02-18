@@ -6,10 +6,10 @@ Template.corporateAccount.onCreated(function() {
 	Meteor.subscribe('Videos');
 });
 
-var companyId = 0;
-
 Template.corporateAccount.helpers({
 	agents: function() {
+		var companyId = FlowRouter.getParam('companyId');
+
 		var allAgents = Agents.find({}).fetch();
 		
 		var agents = [];
@@ -23,6 +23,8 @@ Template.corporateAccount.helpers({
 		return agents;
 	},
 	liveVideos: function() {
+		var companyId = FlowRouter.getParam('companyId');
+
 		var liveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();		
@@ -37,6 +39,8 @@ Template.corporateAccount.helpers({
 		return liveVideosData;
 	},
 	nonLiveVideos: function() {
+		var companyId = FlowRouter.getParam('companyId');
+				
 		var nonLiveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();

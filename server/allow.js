@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 import { Agents } from '../collections/agents.js';
 import { Videos } from '../collections/videos.js';
+import { Companies } from '../collections/companies.js';
 
 export function allowAll() {
 	Agents.allow({
@@ -24,6 +25,18 @@ export function allowAll() {
 			return true;
 		},
 		'remove': function(videoId, doc) {
+			return true;
+		}
+	});
+	
+	Companies.allow({
+		'insert': function(companyId, doc) {
+			return true;
+		},
+		'update': function(companyId, doc) {
+			return true;
+		},
+		'remove': function(companyId, doc) {
 			return true;
 		}
 	});

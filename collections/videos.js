@@ -5,7 +5,7 @@ export const Videos = new Mongo.Collection('Videos');
 
 VideoSchema = new SimpleSchema({
 	companyId: {
-		type: Number,
+		type: String,
 		label: 'Company ID',
 		optional: false
 	},
