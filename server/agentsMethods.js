@@ -4,8 +4,9 @@ import { Agents } from '../collections/agents.js';
 
 export function agentsMethods() {
 	Meteor.methods({
-		'createAgent':function(firstName, lastName, email, phoneNumber, videoLink, imageUrl, available, waitTime) {
+		'createAgent':function(companyId, firstName, lastName, email, phoneNumber, videoLink, imageUrl, available, waitTime) {
 			var agentObject = {
+				companyId: companyId,
 				firstName: firstName,
 				lastName: lastName,
 				email: email,
@@ -21,9 +22,10 @@ export function agentsMethods() {
 		'removeAgent':function(agentId) {
 			Agents.remove(agentId);
 		}, 
-		'updateAgent':function(agentId, firstName, lastName, email, phoneNumber, videoLink, imageUrl, available, waitTime) {
+		'updateAgent':function(companyId, agentId, firstName, lastName, email, phoneNumber, videoLink, imageUrl, available, waitTime) {
 			Agents.update({_id: agentId}, {
 				$set: {
+					companyId: companyId,
 					firstName: firstName,
 					lastName: lastName,
 					email: email,
@@ -32,7 +34,7 @@ export function agentsMethods() {
 					imageUrl: imageUrl,
 					available: available,
 					waitTime: waitTime
-				}
+					}
 			});
 		}
 	});

@@ -5,8 +5,13 @@
 		<script src='../js/awesomplete.min.js' async></script>
 	</head>
 	<body>
+		<div class='full-screen-menu'> </div>
+		<div class='menu-options'>
+			<div class='menu-option'>Hub</div>
+			<div class='menu-option'>Account</div>
+		</div>
 		<div class='ls-header'>
-			<img class='ls-menu-icon' src='../res/menu-black.svg'>
+			<img class='ls-menu-icon menu-button' src='../res/menu-black.svg'>
 			<div class='ls-company'>CSG International</div>
 		</div>
 		<div>
@@ -28,13 +33,13 @@
 		</div>
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
-			<div class='ls-notes'> 
+			<div class='ls-notes'>
 				<textarea width="99%" height="99%" id='notesTextarea'></textarea>
 			</div>
 			<button onclick='saveTextAsFile();'>Download Notes</button>
 		</div>
 	</body>
-	
+
 	<script>
 		function saveTextAsFile() {
 			var textToWrite = document.getElementById('notesTextarea').value;
@@ -57,6 +62,17 @@
 
 			downloadLink.click();
 		}
+
+		var time = 300;
+		$('.menu-button').click(function() {
+			$('.full-screen-menu').fadeIn(time);
+			$('.menu-options').fadeIn(time);
+		});
+
+		$('.full-screen-menu').click(function() {
+			$('.full-screen-menu').fadeOut(time);
+			$('.menu-options').fadeOut(time);
+		});
 	</script>
-	
+
 </template>

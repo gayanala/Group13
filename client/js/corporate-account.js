@@ -1,23 +1,39 @@
 import { Agents } from '../../collections/agents.js';
 import { Videos } from '../../collections/videos.js';
+import { Companies } from '../../collections/companies.js';
 
 Template.corporateAccount.onCreated(function() {
     Meteor.subscribe('Agents');
 	Meteor.subscribe('Videos');
+	Meteor.subscribe('Companies');
 });
 
 Template.corporateAccount.helpers({
 	agents: function() {
-		return Agents.find({}).fetch();
+		var companyId = FlowRouter.getParam('companyId');
+
+		var allAgents = Agents.find({}).fetch();
+		
+		var agents = [];
+		for(var i = 0; i < allAgents.length; i++) {
+			var agent = allAgents[i];
+			if(agent.companyId == companyId) {
+				agents.push(agent)
+			}
+		}
+		
+		return agents;
 	},
 	liveVideos: function() {
+		var companyId = FlowRouter.getParam('companyId');
+
 		var liveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();		
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
 									
-			if(video.live) {
+			if(video.live && video.companyId == companyId) {
 				liveVideosData.push(video);
 			}
 		}
@@ -25,18 +41,30 @@ Template.corporateAccount.helpers({
 		return liveVideosData;
 	},
 	nonLiveVideos: function() {
+		var companyId = FlowRouter.getParam('companyId');
+				
 		var nonLiveVideosData = [];
 		
 		var allVideos = Videos.find({}).fetch();
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
 			
-			if(!video.live) {
+			if(!video.live && video.companyId == companyId) {
 				nonLiveVideosData.push(video);
 			}
 		}
 		
 		return nonLiveVideosData;
+	},
+	companyName: function() {
+		var companyId = FlowRouter.getParam('companyId');
+		
+		return Companies.findOne({_id: companyId}).companyName;
+	},
+	companyShortName: function() {
+		var companyId = FlowRouter.getParam('companyId');
+		
+		return Companies.findOne({_id: companyId}).shortName;
 	}
 });
 
