@@ -76,15 +76,15 @@
 				<div class='video-feed'>
 					<div class='video-feed-title'>Videos by CSGi</div>
 					{{#each liveVideos}}
-						<div class='video live-video'>
-							<img src='{{imageUrl}}'/>
-							<div class='video-text text-live'>Live Now</div>
+						<div class='video live-video clickable-video' id='{{_id}}'>
+							<img src='{{imageUrl}}' class='clickable-video' id='{{_id}}'/>
+							<div class='video-text text-live clickable-video' id='{{_id}}'>Live Now</div>				
 						</div>
 					{{/each}}
 					{{#each nonLiveVideos}}
-						<div class='video'>
-							<img src='{{imageUrl}}' class="player-position" />
-							<img src="../res/play.svg" class="play-button"/>
+						<div class='video clickable-video' id='{{_id}}'>
+							<img src='{{imageUrl}}' class="player-position clickable-video" id='{{_id}}'/>
+							<img src="../res/play.svg" class="play-button clickable-video" id='{{_id}}'/>
 						</div>
 					{{/each}}
 				</div>
