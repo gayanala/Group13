@@ -27,5 +27,18 @@ Template.livestream.helpers({
 		if(video != undefined) {
 			return video.live;
 		}
+	},
+	agentLivestream: function() {
+		var video = Videos.findOne({_id: FlowRouter.getParam('id')});
+		
+		if(video == undefined) {
+			var agent = Agents.findOne({_id: FlowRouter.getParam('id')});
+			
+			if(agent != undefined) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 });
