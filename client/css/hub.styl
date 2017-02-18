@@ -43,12 +43,15 @@ center(t = auto, r = auto, b = auto, l = auto)
 	set-position(24px, , , 32px)
 	z-index 1
 
+	&:hover
+		cursor pointer
+
 .hub-banner
 	set-dimension(800px, 100vw)
 
 .hub-background
 	set-dimension(800px, 100vw)
-	background url('../res/blue.jpg') no-repeat bottom -100px center
+	background url('../res/blue.jpg') no-repeat bottom center
 	background-size cover
 	position fixed
 
@@ -120,7 +123,7 @@ center(t = auto, r = auto, b = auto, l = auto)
 .card-filter
 	set-position(0, , , 0)
 	set-dimension(100%, 100%)
-	background rgba(0, 0, 0, 0.6)
+	background rgba(0, 0, 0, 0.5)
 
 .card-title
 	center(50%, , , 50%)
@@ -130,19 +133,19 @@ center(t = auto, r = auto, b = auto, l = auto)
 
 .penske
 	background url('../res/penske.jpg') no-repeat center center
-	background-size cover
+	background-size 150%
 
 .comcast
 	background url('../res/comcast.jpg') no-repeat center center
-	background-size cover
+	background-size 150%
 
 .dish
 	background url('../res/dish.jpeg') no-repeat center center
-	background-size cover
+	background-size 150%
 
 .cox
 	background url('../res/cox.jpg') no-repeat center center
-	background-size cover
+	background-size 150%
 
 .encouragement
 	color dark-grey

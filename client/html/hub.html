@@ -47,7 +47,7 @@
 					<div class='card-filter'> </div>
 					<div class='card-title'>Penske</div>
 				</div>
-				<div class='card comcast' onmouseover="focusCard('comcast')">
+				<div class='card comcast'>
 					<div class='card-filter'> </div>
 					<div class='card-title'>Comcast</div>
 				</div>
@@ -56,4 +56,24 @@
 			<div class='footer'>Powered by CSG International</div>
 		</div>
 	</body>
+	<script>
+		$('.card').hover(function() {
+			$(this).css({
+				'background-size': '175%',
+				'transition': 'background-size 0.25s'
+			});
+		}, function() {
+			$(this).css({
+				'background-size': '150%',
+				'transition': 'background-size 0.25s'
+			});
+		});
+
+		$(window).scroll(function () {
+		    var pix = $(document).scrollTop()
+		    pixs = Math.pow(pix / 100, 2);
+			if (pix < 200)
+		    	$(".hub-background").css({"-webkit-filter": "blur("+pix+"px)","filter": "blur("+pixs+"px)" })
+		});
+	</script>
 </template>

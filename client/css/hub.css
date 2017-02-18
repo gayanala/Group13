@@ -7,6 +7,9 @@
   left: 32px;
   z-index: 1;
 }
+.hub-menu-icon:hover {
+  cursor: pointer;
+}
 .hub-banner {
   height: 800px;
   width: 100vw;
@@ -14,7 +17,7 @@
 .hub-background {
   height: 800px;
   width: 100vw;
-  background: url("../res/blue.jpg") no-repeat bottom -100px center;
+  background: url("../res/blue.jpg") no-repeat bottom center;
   background-size: cover;
   position: fixed;
 }
@@ -101,7 +104,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
 }
 .card-title {
   position: absolute;
@@ -115,19 +118,19 @@
 }
 .penske {
   background: url("../res/penske.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .comcast {
   background: url("../res/comcast.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .dish {
   background: url("../res/dish.jpeg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .cox {
   background: url("../res/cox.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .encouragement {
   color: #36454f;
