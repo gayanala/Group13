@@ -807,7 +807,7 @@ Meteor.startup(() => {
 			videoName: 'How to Check Bills Online',
 			live: true,
 			datePublished: new Date(),
-			imageUrl: '/res/YouTubeThumbnails/Virgin.jpg',
+			imageUrl: '/res/YouTubeThumbnails/VirginMobile.jpg',
 			videoUrl: 'https://www.youtube.com/embed/ePDywwEH3Dw',
 			agent: Agents.find({}).fetch()[0]
 		});
@@ -818,7 +818,7 @@ Meteor.startup(() => {
 			videoName: 'How to Set Up Automatic Billing',
 			live: false,
 			datePublished: new Date(),
-			imageUrl: '/res/YouTubeThumbnails/Virgin1.jpg',
+			imageUrl: '/res/YouTubeThumbnails/VirginMobile1.jpg',
 			videoUrl: 'https://www.youtube.com/embed/EzNL0G81DeE',
 			agent: Agents.find({}).fetch()[1]
 		});
@@ -829,7 +829,7 @@ Meteor.startup(() => {
 			videoName: 'When to Dispute a Bad Claim',
 			live: false,
 			datePublished: new Date(),
-			imageUrl: '/res/YouTubeThumbnails/Virgin2.jpg',
+			imageUrl: '/res/YouTubeThumbnails/VirginMobile2.jpg',
 			videoUrl: 'https://www.youtube.com/embed/7ZYy8Iv9-f4',
 			agent: Agents.find({}).fetch()[2]
 		});
@@ -840,7 +840,7 @@ Meteor.startup(() => {
 			videoName: 'Finding your Account Number',
 			live: false,
 			datePublished: new Date(),
-			imageUrl: '/res/YouTubeThumbnails/Virgin3.jpg',
+			imageUrl: '/res/YouTubeThumbnails/VirginMobile3.jpg',
 			videoUrl: 'https://www.youtube.com/embed/oqDPlzdbLG0',
 			agent: Agents.find({}).fetch()[3]
 		});
