@@ -124,8 +124,22 @@
   padding: 12px 36px;
   border-radius: 48px;
   font-size: 24px;
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 .download-notes:hover {
+  cursor: pointer;
+}
+.uploadInput {
+  display: none;
+}
+.file-upload {
+  color: #fff;
+  font-family: 'Open Sans';
+  background: #36454f;
+  padding: 12px 36px;
+  border-radius: 48px;
+  font-size: 24px;
+}
+.file-upload:hover {
   cursor: pointer;
 }
