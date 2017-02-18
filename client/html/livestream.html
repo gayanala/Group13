@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		{{> menu}}
-		
+
 		<div class='ls-header'>
 			<img class='ls-menu-icon menu-button' src='../res/menu-black.svg'>
 			<div class='ls-company'>CSG International</div>
@@ -30,10 +30,10 @@
 		</div>
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
+			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
 			<div class='ls-notes'>
-				<textarea width="99%" height="99%" id='notesTextarea'></textarea>
+				<textarea id='notesTextarea'></textarea>
 			</div>
-			<button onclick='saveTextAsFile();'>Download Notes</button>
 		</div>
 	</body>
 
