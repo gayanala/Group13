@@ -7,7 +7,7 @@
 		<img class='hub-menu-icon' src='../res/menu.svg'>
 		<div class='hub-background'> </div>
 		<div class='hub-banner'> </div>
-		<div class='hub-title'>Welcome to the future of communications.</div>
+		<div class='hub-title'>Welcome to the future of customer service.</div>
 		<div class='hub-title-highlight'> </div>
 		<div class='hub-content'>
 			<div class='hub-search-bar'>
@@ -27,27 +27,27 @@
 				</div>
 				<div class='card dish'>
 					<div class='card-filter'> </div>
-					<div class='card-title'>Dish</div>
+					<div class='card-title'>Dish Network</div>
 				</div>
 				<div class='card cox'>
 					<div class='card-filter'> </div>
-					<div class='card-title'>Cox</div>
+					<div class='card-title'>CSG International</div>
 				</div>
 			</div>
 			<div class='card-wrapper'>
 				<div class='card dish'>
 					<div class='card-filter'> </div>
-					<div class='card-title'>Dish</div>
+					<div class='card-title'>Dish Network</div>
 				</div>
 				<div class='card cox'>
 					<div class='card-filter'> </div>
-					<div class='card-title'>Cox</div>
+					<div class='card-title'>CSG International</div>
 				</div>
 				<div class='card penske'>
 					<div class='card-filter'> </div>
 					<div class='card-title'>Penske</div>
 				</div>
-				<div class='card comcast' onmouseover="focusCard('comcast')">
+				<div class='card comcast'>
 					<div class='card-filter'> </div>
 					<div class='card-title'>Comcast</div>
 				</div>
@@ -56,4 +56,35 @@
 			<div class='footer'>Powered by CSG International</div>
 		</div>
 	</body>
+	<script>
+		$(document).ready(function() {
+			$('.hub-title').delay(500).fadeIn();
+			$('.hub-title-highlight').delay(750).animate({'width': '750px'}, 300);
+		});
+
+		$('.card').hover(function() {
+			$(this).css({
+				'background-size': '175%',
+				'color': '#3299ff',
+				'transition': 'all 0.25s'
+			});
+		}, function() {
+			$(this).css({
+				'background-size': '150%',
+				'color': 'white',
+				'transition': 'all 0.25s'
+			});
+		});
+
+		$('.hub-search-icon').click(function() {
+			$('.hub-search-query').focus();
+		});
+
+		$(window).scroll(function () {
+		    var pix = $(document).scrollTop();
+		    pix = Math.pow(pix / 100, 2);
+			if (pix < 20)
+		    	$(".hub-background").css({"-webkit-filter": "blur("+pix+"px)","filter": "blur("+pix+"px)" })
+		});
+	</script>
 </template>
