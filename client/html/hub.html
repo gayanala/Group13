@@ -4,9 +4,7 @@
 		<link rel='stylesheet' href='../css/hub.css'>
 	</head>
 	<body>
-		{{> menu}}
 		<img class='menu-icon menu-button' src='../res/menu.svg'>
-			
 		<div class='hub-background'> </div>
 		<div class='hub-banner'> </div>
 		<div class='hub-title'>Welcome to the future of customer service.</div>
@@ -41,7 +39,7 @@
 	<script>
 		$(document).ready(function() {
 			$('.hub-title').delay(500).fadeIn();
-			$('.hub-title-highlight').delay(750).animate({'width': '750px'}, 300);
+			$('.hub-title-highlight').delay(750).animate({'width': '750px'}, 800);
 
 			$('.card').hover(function() {
 				$(this).css({

@@ -4,7 +4,6 @@
 		<link rel='stylesheet' href='../css/livestream.css'>
 	</head>
 	<body>
-		
 		<div class='ls-header'>
 			{{> menu}}
 			<img class='ls-menu-icon menu-button' src='../res/menu-black.svg'>
@@ -29,10 +28,10 @@
 		</div>
 		<div class='ls-notes-wrapper'>
 			<div class='ls-notes-title'>Notes</div>
+			<button class='download-notes' onclick='saveTextAsFile();'>Download Notes</button>
 			<div class='ls-notes'>
-				<textarea width="99%" height="99%" id='notesTextarea'></textarea>
+				<textarea id='notesTextarea'></textarea>
 			</div>
-			<button onclick='saveTextAsFile();'>Download Notes</button>
 		</div>
 	</body>
 
