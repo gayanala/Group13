@@ -15,17 +15,17 @@ Meteor.startup(() => {
 	// Set up publish model
 	allowAll();
 	publishAll();
-	
+
 	// Bring in agents methods
 	agentsMethods();
 	videosMethods();
 	companiesMethods();
-	
+
 	// Clear the databases (for testing)
 	Videos.remove({});
 	Agents.remove({});
 	Companies.remove({});
-	
+
 	// Initialize the Companies database (for testing)
 	if(Companies.find({}).fetch().length <= 0) {
 		//Company 1
@@ -40,54 +40,54 @@ Meteor.startup(() => {
 			shortName: 'Penske',
 			className: 'penske'
 		});
-		
+
 		//Company 3
 		Companies.insert({
 			companyName: 'Comcast',
 			shortName: 'Comcast',
 			className: 'comcast'
 		});
-		
+
 		//Company 4
 		Companies.insert({
 			companyName: 'Dish Network',
 			shortName: 'Dish',
 			className: 'dish'
 		});
-		
+
 		//Company 5
 		Companies.insert({
 			companyName: 'Cox Communications',
 			shortName: 'Cox',
-			className: 'cox'
+			className: 'penske'
 		});
-		
+
 		//Company 6
 		Companies.insert({
 			companyName: 'Charter Communications',
 			shortName: 'Charter',
-			className: 'penske'
+			className: 'dish'
 		});
-		
+
 		//Company 7
 		Companies.insert({
 			companyName: 'Verizon Wireless',
 			shortName: 'Verizon',
-			className: 'comcast'
+			className: 'cox'
 		});
-		
+
 		//Company 8
 		Companies.insert({
 			companyName: 'Virgin Mobile',
 			shortName: 'Virgin Mobile',
-			className: 'cox'
+			className: 'comcast'
 		});
 	}
-	
+
 	var csgiCompanyId = Companies.find({shortName:'CSGi'}).fetch()[0]._id;
-	
+
 	// Initialize the Agents database (for testing)
-	if(Agents.find({}).fetch().length <= 0) { 
+	if(Agents.find({}).fetch().length <= 0) {
 		//Agent 1
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -100,7 +100,7 @@ Meteor.startup(() => {
 			available: true,
 			waitTime: 0
 		});
-		
+
 		//Agent 2
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -113,7 +113,7 @@ Meteor.startup(() => {
 			available: false,
 			waitTime: 11
 		});
-		
+
 		//Agent 3
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -126,7 +126,7 @@ Meteor.startup(() => {
 			available: false,
 			waitTime: 4
 		});
-		
+
 		//Agent 4
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -139,7 +139,7 @@ Meteor.startup(() => {
 			available: true,
 			waitTime: 0
 		});
-		
+
 		//Agent 5
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -152,7 +152,7 @@ Meteor.startup(() => {
 			available: false,
 			waitTime: 2
 		});
-		
+
 		//Agent 6
 		Agents.insert({
 			companyId: csgiCompanyId,
@@ -166,7 +166,7 @@ Meteor.startup(() => {
 			waitTime: 0
 		});
 	}
-	
+
 	// Initialize the Videos database (for testing)
 	if(Videos.find({}).fetch().length <= 0) {
 		// Video 1
@@ -179,7 +179,7 @@ Meteor.startup(() => {
 			videoUrl: 'https://www.youtube.com/embed/pcZWgvMJ7xg',
 			agent: Agents.find({}).fetch()[0]
 		});
-		
+
 		// Video 2
 		Videos.insert({
 			companyId: csgiCompanyId,
@@ -190,7 +190,7 @@ Meteor.startup(() => {
 			videoUrl: 'https://www.youtube.com/embed/2uyQ9WG0BIY',
 			agent: Agents.find({}).fetch()[1]
 		});
-		
+
 		// Video 3
 		Videos.insert({
 			companyId: csgiCompanyId,
@@ -201,7 +201,7 @@ Meteor.startup(() => {
 			videoUrl: 'https://www.youtube.com/embed/GJpZ0aPQiQ0',
 			agent: Agents.find({}).fetch()[2]
 		});
-		
+
 		// Video 4
 		Videos.insert({
 			companyId: csgiCompanyId,
@@ -213,4 +213,4 @@ Meteor.startup(() => {
 			agent: Agents.find({}).fetch()[3]
 		});
 	}
-});	
+});

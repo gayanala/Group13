@@ -119,6 +119,8 @@
   transform: translate(-50%, -50%);
   font-family: 'Open Sans';
   font-size: 48px;
+  width: 90%;
+  text-align: center;
 }
 .penske {
   background: url("../res/penske.jpg") no-repeat center center;
