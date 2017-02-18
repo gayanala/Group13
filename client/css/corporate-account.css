@@ -8,7 +8,12 @@ body {
 .menu-icon {
   position: absolute;
   top: 32px;
-  right: 32px;
+  left: 32px;
+  height: 32px;
+  z-index: 1;
+}
+.menu-icon:hover {
+  cursor: pointer;
 }
 .splash-banner {
   height: 500px;
@@ -37,6 +42,11 @@ body {
   color: #fff;
   font-weight: 700;
 }
+.splash-padding {
+  height: 25px;
+  width: 100vw;
+  background: #36454f;
+}
 .account-content {
   display: flex;
 }
@@ -50,7 +60,7 @@ body {
 }
 .search-bar {
   height: 64px;
-  width: 70%;
+  width: 80%;
   border-radius: 32px;
   background: #fff;
   border: 3px solid #ddd;
@@ -157,8 +167,8 @@ body {
   flex-direction: column;
 }
 .video {
-  height: 250px;
-  width: 56%;
+  height: 265px;
+  width: 66%;
   background: #ddd;
   margin: 24px 0;
   position: relative;
@@ -192,6 +202,9 @@ body {
 .corporate-account-video-text-live {
   color: #f00;
 }
+.corporate-account-video-text-live:hover {
+  font-size: 42px;
+}
 .corporate-account-video-player-posistion {
   margin-left: 0px;
 }
@@ -208,4 +221,15 @@ body {
 .corporate-account-video-player-play-button:hover {
   height: 110px;
   width: 110px;
+}
+.footer {
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Open Sans';
+  background: #36454f;
 }
