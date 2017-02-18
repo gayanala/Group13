@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
 grey = #ddd
+dark-grey = #36454F
 
 set-position(t = auto, r = auto, b = auto, l = auto)
 	position absolute
@@ -37,67 +38,101 @@ center(t = auto, r = auto, b = auto, l = auto)
 	else if r != auto
 		transform translate(50%, -50%)
 
-.company
-	set-position(24px, 32px, , )
+.ls-header
+	set-dimension(75px, 100%)
+
+.ls-menu-icon
+	set-dimension(32px, 32px)
+	set-position(24px, , , 32px)
+
+	&:hover
+		cursor pointer
+
+.ls-company
+	set-position(16px, 32px, , )
 	font-size 32px
 	font-family 'Open Sans'
-	z-index 1
 
-.livestream-title
+.ls-stream-title
+	set-dimension(, 100%)
+	text-align center
 	font-size 48px
 	font-family 'Open Sans'
-	set-dimension(, 80%)
-	text-align center
-	set-position(100px, , , 50%)
-	margin-right -50%
-	transform translateX(-50%)
+	margin-bottom 24px
 
-.live-wrapper
-	set-position(175px, , , 0)
-	set-dimension(, 100vw)
+.ls-column-wrapper
 	display flex
-	box-sizing border-box
-	margin-bottom 64px
 
-.live-column
-	padding 36px
-	box-sizing border-box
-
-.livestream
-	background blue
-	set-dimension(630px, 1300px)
-
-.livestream-dashboard
-	set-dimension(70px, 1300px)
-	background pink
-
-.chat-column
+.ls-left-column
 	flex-grow 1
-	padding 36px
+	padding 24px
 	box-sizing border-box
+
+.ls-stream
+	set-dimension(600px, 1200px)
+	background grey
+
+.ls-stream-dashboard
+	set-dimension(90px, 1200px)
+	background dark-grey
+	display flex
+	justify-content flex-end
+	align-items center
+	padding-right 24px
+	box-sizing border-box
+
+	& img
+		margin 0 12px
+		set-dimension(56px, )
+
+.ls-right-column
+	flex-grow 100
+	padding 24px
+	box-sizing border-box
+
+.ls-chat
+	set-dimension(600px, )
+	background grey
+
+.ls-chat-dashboard
+	set-dimension(90px, )
+	background dark-grey
+	padding 0 18px
+	box-sizing border-box
+	display flex
+	justify-content space-between
+	align-items center
+
+.ls-chat-box
+	set-dimension(60%, 90%)
+	background white
+	font-family 'Open Sans'
+	color dark-grey
+	font-size 18px
+	padding 8px
+	box-sizing border-box
+
+.ls-chat-button
+	color white
+	font-family 'Open Sans'
+	font-size 18px
+
+	&:hover
+		cursor pointer
+
+.ls-notes-wrapper
+	set-dimension(, 100%)
+	margin-bottom 64px
 	display flex
 	flex-direction column
 	align-items center
+	margin-top 64px
 
-.chat
-	background pink
-	set-dimension(90%, 95%)
-
-.dashboard
-	background blue
-	flex-grow 1
-	set-dimension(, 95%)
-
-.notes-title
-	set-position(1000px, , , 50%)
-	margin-right -50%
-	transform translateX(-50%)
+.ls-notes-title
 	font-size 48px
 	font-family 'Open Sans'
+	margin-bottom 24px
 
-.notes
-	set-dimension(500px, 90%)
+.ls-notes
+	set-dimension(400px, 80%)
 	background grey
-	set-position(1100px, , , 50%)
-	margin-right -50%
-	transform translateX(-50%)
