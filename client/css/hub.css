@@ -7,6 +7,9 @@
   left: 32px;
   z-index: 1;
 }
+.hub-menu-icon:hover {
+  cursor: pointer;
+}
 .hub-banner {
   height: 800px;
   width: 100vw;
@@ -14,7 +17,7 @@
 .hub-background {
   height: 800px;
   width: 100vw;
-  background: url("../res/blue.jpg") no-repeat bottom -100px center;
+  background: url("../res/blue.jpg") no-repeat bottom center;
   background-size: cover;
   position: fixed;
 }
@@ -29,10 +32,11 @@
   font-weight: 300;
   font-family: 'Open Sans';
   text-align: center;
+  display: none;
 }
 .hub-title-highlight {
   height: 2px;
-  width: 550px;
+  width: 0;
   position: absolute;
   top: 47.5%;
   left: 50%;
@@ -56,7 +60,7 @@
   background: #fff;
   border: 3px solid #ddd;
   padding: 12px;
-  margin: 48px 0;
+  margin: 128px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
@@ -81,6 +85,9 @@
 .hub-search-icon {
   width: 64px;
 }
+.hub-search-icon:hover {
+  cursor: pointer;
+}
 .card-wrapper {
   height: 400px;
   width: 100vw;
@@ -91,6 +98,7 @@
   box-sizing: border-box;
   height: 100%;
   position: relative;
+  color: #fff;
 }
 .card:hover {
   cursor: pointer;
@@ -101,7 +109,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
 }
 .card-title {
   position: absolute;
@@ -109,25 +117,24 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   font-family: 'Open Sans';
   font-size: 48px;
 }
 .penske {
   background: url("../res/penske.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .comcast {
   background: url("../res/comcast.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .dish {
   background: url("../res/dish.jpeg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .cox {
   background: url("../res/cox.jpg") no-repeat center center;
-  background-size: cover;
+  background-size: 150%;
 }
 .encouragement {
   color: #36454f;
