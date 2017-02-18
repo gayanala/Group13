@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
 grey = #ddd
+dark-grey = #36454F
 
 set-position(t = auto, r = auto, b = auto, l = auto)
 	position absolute
@@ -37,17 +38,101 @@ center(t = auto, r = auto, b = auto, l = auto)
 	else if r != auto
 		transform translate(50%, -50%)
 
-html, body
-	margin 0
-	padding 0
-	overflow-x hidden
+.ls-header
+	set-dimension(75px, 100%)
 
-.live-wrapper
-	set-position(300px, , , 0)
-	set-dimension(600px, 100vw)
-	background grey
+.ls-menu-icon
+	set-dimension(32px, 32px)
+	set-position(24px, , , 32px)
 
-.company
+	&:hover
+		cursor pointer
+
+.ls-company
 	set-position(16px, 32px, , )
 	font-size 32px
 	font-family 'Open Sans'
+
+.ls-stream-title
+	set-dimension(, 100%)
+	text-align center
+	font-size 48px
+	font-family 'Open Sans'
+	margin-bottom 24px
+
+.ls-column-wrapper
+	display flex
+
+.ls-left-column
+	flex-grow 1
+	padding 24px
+	box-sizing border-box
+
+.ls-stream
+	set-dimension(600px, 1200px)
+	background grey
+
+.ls-stream-dashboard
+	set-dimension(90px, 1200px)
+	background dark-grey
+	display flex
+	justify-content flex-end
+	align-items center
+	padding-right 24px
+	box-sizing border-box
+
+	& img
+		margin 0 12px
+		set-dimension(56px, )
+
+.ls-right-column
+	flex-grow 100
+	padding 24px
+	box-sizing border-box
+
+.ls-chat
+	set-dimension(600px, )
+	background grey
+
+.ls-chat-dashboard
+	set-dimension(90px, )
+	background dark-grey
+	padding 0 18px
+	box-sizing border-box
+	display flex
+	justify-content space-between
+	align-items center
+
+.ls-chat-box
+	set-dimension(60%, 90%)
+	background white
+	font-family 'Open Sans'
+	color dark-grey
+	font-size 18px
+	padding 8px
+	box-sizing border-box
+
+.ls-chat-button
+	color white
+	font-family 'Open Sans'
+	font-size 18px
+
+	&:hover
+		cursor pointer
+
+.ls-notes-wrapper
+	set-dimension(, 100%)
+	margin-bottom 64px
+	display flex
+	flex-direction column
+	align-items center
+	margin-top 64px
+
+.ls-notes-title
+	font-size 48px
+	font-family 'Open Sans'
+	margin-bottom 24px
+
+.ls-notes
+	set-dimension(400px, 80%)
+	background grey
