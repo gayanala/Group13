@@ -2,11 +2,13 @@ import { Meteor } from 'meteor/meteor';
 
 import { Agents } from '../collections/agents.js';
 import { Videos } from '../collections/videos.js';
+import { Companies } from '../collections/companies.js';
 
 import { publishAll } from './publish.js';
 import { allowAll } from './allow.js';
 import { agentsMethods } from './agentsMethods.js'
 import { videosMethods } from './videosMethods.js';
+import { companiesMethods } from './companiesMethods.js';
 
 
 Meteor.startup(() => {
@@ -17,15 +19,78 @@ Meteor.startup(() => {
 	// Bring in agents methods
 	agentsMethods();
 	videosMethods();
+	companiesMethods();
 	
 	// Clear the databases (for testing)
 	Videos.remove({});
 	Agents.remove({});
+	Companies.remove({});
+	
+	// Initialize the Companies database (for testing)
+	if(Companies.find({}).fetch().length <= 0) {
+		//Company 1
+		Companies.insert({
+			companyName: 'CSG International',
+			shortName: 'CSGi',
+			className: 'cox'
+		});
+		//Company 2
+		Companies.insert({
+			companyName: 'Penske',
+			shortName: 'Penske',
+			className: 'penske'
+		});
+		
+		//Company 3
+		Companies.insert({
+			companyName: 'Comcast',
+			shortName: 'Comcast',
+			className: 'comcast'
+		});
+		
+		//Company 4
+		Companies.insert({
+			companyName: 'Dish Network',
+			shortName: 'Dish',
+			className: 'dish'
+		});
+		
+		//Company 5
+		Companies.insert({
+			companyName: 'Cox Communications',
+			shortName: 'Cox',
+			className: 'cox'
+		});
+		
+		//Company 6
+		Companies.insert({
+			companyName: 'Charter Communications',
+			shortName: 'Charter',
+			className: 'penske'
+		});
+		
+		//Company 7
+		Companies.insert({
+			companyName: 'Verizon Wireless',
+			shortName: 'Verizon',
+			className: 'comcast'
+		});
+		
+		//Company 8
+		Companies.insert({
+			companyName: 'Virgin Mobile',
+			shortName: 'Virgin Mobile',
+			className: 'cox'
+		});
+	}
+	
+	var csgiCompanyId = Companies.find({shortName:'CSGi'}).fetch()[0]._id;
 	
 	// Initialize the Agents database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 
 		//Agent 1
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
 			email: 'sheila.bleyhl@csgi.com',
@@ -38,6 +103,7 @@ Meteor.startup(() => {
 		
 		//Agent 2
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
 			email: 'brandon.gene@csgi.com',
@@ -50,6 +116,7 @@ Meteor.startup(() => {
 		
 		//Agent 3
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
 			email: 'lauren.darrin@csgi.com',
@@ -62,6 +129,7 @@ Meteor.startup(() => {
 		
 		//Agent 4
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
 			email: 'ronald.reagan@csgi.com',
@@ -74,6 +142,7 @@ Meteor.startup(() => {
 		
 		//Agent 5
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
 			email: 'jerrod.sigmund@csgi.com',
@@ -86,6 +155,7 @@ Meteor.startup(() => {
 		
 		//Agent 6
 		Agents.insert({
+			companyId: csgiCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
 			email: 'len.slade@csgi.com',
@@ -101,6 +171,7 @@ Meteor.startup(() => {
 	if(Videos.find({}).fetch().length <= 0) {
 		// Video 1
 		Videos.insert({
+			companyId: csgiCompanyId,
 			videoName: 'How to Check Bills Online',
 			live: true,
 			datePublished: new Date(),
@@ -111,6 +182,7 @@ Meteor.startup(() => {
 		
 		// Video 2
 		Videos.insert({
+			companyId: csgiCompanyId,
 			videoName: 'How to Set Up Automatic Billing',
 			live: false,
 			datePublished: new Date(),
@@ -121,6 +193,7 @@ Meteor.startup(() => {
 		
 		// Video 3
 		Videos.insert({
+			companyId: csgiCompanyId,
 			videoName: 'When to Dispute a Bad Claim',
 			live: false,
 			datePublished: new Date(),
@@ -131,6 +204,7 @@ Meteor.startup(() => {
 		
 		// Video 4
 		Videos.insert({
+			companyId: csgiCompanyId,
 			videoName: 'Finding your Account Number',
 			live: false,
 			datePublished: new Date(),
@@ -138,5 +212,5 @@ Meteor.startup(() => {
 			videoUrl: 'https://www.youtube.com/embed/kMAKbE_db3A',
 			agent: Agents.find({}).fetch()[3]
 		});
-	}	
-});
+	}
+});	

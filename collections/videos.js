@@ -4,6 +4,11 @@ import { AgentSchema } from './agents.js';
 export const Videos = new Mongo.Collection('Videos');
 
 VideoSchema = new SimpleSchema({
+	companyId: {
+		type: String,
+		label: 'Company ID',
+		optional: false
+	},
 	videoName: {
 		type: String,
 		label: 'Video Name',
