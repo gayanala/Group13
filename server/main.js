@@ -40,13 +40,32 @@ Meteor.startup(() => {
 		});
 		
 		//Company 3
+		Companies.insert({
+			companyName: 'Comcast',
+			shortName: 'Comcast'
+		});
+		
+		//Company 4
+		Companies.insert({
+			companyName: 'Dish Network',
+			shortName: 'Dish'
+		});
+		
+		//Company 5
+		Companies.insert({
+			companyName: 'Cox Communications',
+			shortName: 'Cox'
+		});
 	}
+	
+	var csgiCompanyId = Companies.find({shortName:'CSGi'}).fetch()[0]._id;
+	console.log("COMPANY ID: " + csgiCompanyId);
 	
 	// Initialize the Agents database (for testing)
 	if(Agents.find({}).fetch().length <= 0) { 
 		//Agent 1
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Sheila',
 			lastName: 'Bleyhl',
 			email: 'sheila.bleyhl@csgi.com',
@@ -59,7 +78,7 @@ Meteor.startup(() => {
 		
 		//Agent 2
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Brandon',
 			lastName: 'Gene',
 			email: 'brandon.gene@csgi.com',
@@ -72,7 +91,7 @@ Meteor.startup(() => {
 		
 		//Agent 3
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Lauren',
 			lastName: 'Darrin',
 			email: 'lauren.darrin@csgi.com',
@@ -85,7 +104,7 @@ Meteor.startup(() => {
 		
 		//Agent 4
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Ronald',
 			lastName: 'Reagan',
 			email: 'ronald.reagan@csgi.com',
@@ -98,7 +117,7 @@ Meteor.startup(() => {
 		
 		//Agent 5
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Jared',
 			lastName: 'Freud',
 			email: 'jerrod.sigmund@csgi.com',
@@ -111,7 +130,7 @@ Meteor.startup(() => {
 		
 		//Agent 6
 		Agents.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			firstName: 'Len',
 			lastName: 'Slade',
 			email: 'len.slade@csgi.com',
@@ -127,7 +146,7 @@ Meteor.startup(() => {
 	if(Videos.find({}).fetch().length <= 0) {
 		// Video 1
 		Videos.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			videoName: 'How to Check Bills Online',
 			live: true,
 			datePublished: new Date(),
@@ -138,7 +157,7 @@ Meteor.startup(() => {
 		
 		// Video 2
 		Videos.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			videoName: 'How to Set Up Automatic Billing',
 			live: false,
 			datePublished: new Date(),
@@ -149,7 +168,7 @@ Meteor.startup(() => {
 		
 		// Video 3
 		Videos.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			videoName: 'When to Dispute a Bad Claim',
 			live: false,
 			datePublished: new Date(),
@@ -160,7 +179,7 @@ Meteor.startup(() => {
 		
 		// Video 4
 		Videos.insert({
-			companyId: 0,
+			companyId: csgiCompanyId,
 			videoName: 'Finding your Account Number',
 			live: false,
 			datePublished: new Date(),
@@ -169,34 +188,4 @@ Meteor.startup(() => {
 			agent: Agents.find({}).fetch()[3]
 		});
 	}
-
-	Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
-
-    switch (operator) {
-        case '==':
-            return (v1 == v2) ? options.fn(this) : options.inverse(this);
-        case '===':
-            return (v1 === v2) ? options.fn(this) : options.inverse(this);
-        case '!=':
-            return (v1 != v2) ? options.fn(this) : options.inverse(this);
-        case '!==':
-            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-        case '<':
-            return (v1 < v2) ? options.fn(this) : options.inverse(this);
-        case '<=':
-            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-        case '>':
-            return (v1 > v2) ? options.fn(this) : options.inverse(this);
-        case '>=':
-            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-        case '&&':
-            return (v1 && v2) ? options.fn(this) : options.inverse(this);
-        case '||':
-            return (v1 || v2) ? options.fn(this) : options.inverse(this);
-        default:
-            return options.inverse(this);
-    }
 });	
-});
-
-
