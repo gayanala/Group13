@@ -13,12 +13,10 @@ Template.corporateAccount.helpers({
 	liveVideos: function() {
 		var liveVideosData = [];
 		
-		var allVideos = Videos.find({}).fetch();
+		var allVideos = Videos.find({}).fetch();		
 		for(var i = 0; i < allVideos.length; i++) {
 			var video = allVideos[i];
-			
-			console.log(video.live);
-			
+									
 			if(video.live) {
 				liveVideosData.push(video);
 			}
@@ -39,5 +37,13 @@ Template.corporateAccount.helpers({
 		}
 		
 		return nonLiveVideosData;
+	}
+});
+
+Template.corporateAccount.events({
+	'click .clickable-video'(event) {
+		event.preventDefault();
+		FlowRouter.go("/livestream/" + event.target.id);
+		scroll(0, 0); // Will scroll it to the top of page
 	}
 });

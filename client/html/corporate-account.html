@@ -75,16 +75,16 @@
 			<div class='right-column'>
 				<div class='video-feed'>
 					{{#each liveVideos}}
-						<div class='video'>
-							<img src='{{imageUrl}}'/>
-							<div class='video-text corporate-account-video-text-live'>Live Now</div>
+						<div class='video clickable-video' id='{{_id}}'>
+							<img src='{{imageUrl}}' class='clickable-video' id='{{_id}}'/>
+							<div class='video-text corporate-account-video-text-live clickable-video' id='{{_id}}'>Live Now</div>				
 						</div>
 					{{/each}}
 					<div class='divider'> </div>
 					{{#each nonLiveVideos}}
-						<div class='video'>
-							<img src='{{imageUrl}}' class="corporate-account-video-player-posistion" />
-							<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button"/>
+						<div class='video clickable-video' id='{{_id}}'>
+							<img src='{{imageUrl}}' class="corporate-account-video-player-posistion clickable-video" id='{{_id}}'/>
+							<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button clickable-video" id='{{_id}}'/>
 						</div>
 					{{/each}}
 				</div>

@@ -104,6 +104,7 @@ Meteor.startup(() => {
 			live: true,
 			datePublished: new Date(),
 			imageUrl: '/res/hqdefault-3.jpg',
+			videoUrl: 'ADD_THIS_IN',
 			agent: Agents.find({}).fetch()[0]
 		});
 		
@@ -113,6 +114,7 @@ Meteor.startup(() => {
 			live: false,
 			datePublished: new Date(),
 			imageUrl: '/res/hqdefault.jpg',
+			videoUrl: 'ADD_THIS_IN',
 			agent: Agents.find({}).fetch()[1]
 		});
 		
@@ -122,6 +124,7 @@ Meteor.startup(() => {
 			live: false,
 			datePublished: new Date(),
 			imageUrl: '/res/hqdefault-4.jpg',
+			videoUrl: 'ADD_THIS_IN',
 			agent: Agents.find({}).fetch()[2]
 		});
 		
@@ -131,7 +134,8 @@ Meteor.startup(() => {
 			live: false,
 			datePublished: new Date(),
 			imageUrl: '/res/hqdefault-2.jpg',
+			videoUrl: 'ADD_THIS_IN',
 			agent: Agents.find({}).fetch()[3]
 		});
-	}
+	}	
 });

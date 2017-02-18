@@ -24,6 +24,11 @@ VideoSchema = new SimpleSchema({
 		label: 'Image URL',
 		optional: false
 	},
+	videoUrl: {
+		type: String,
+		label: 'Video URL',
+		optional: false
+	},
 	agent: {
 		type: AgentSchema,
 		label: 'Agent',
