@@ -1,11 +1,11 @@
 <template name="corporateAccount">
 	<head>
-		<title>Dish Network Corporate Account Page</title>
+		<title>CSGi Corporate Account Page</title>
 		<link rel='stylesheet' href='../css/corporate-account.css'>
 
 		<!-- Natural Language Processing -->
 		<script src='https://unpkg.com/nlp_compromise@latest/builds/nlp_compromise.min.js'></script>
-		
+
 		<!-- Autocomplete -->
 		<link rel='stylesheet' href='../css/awesomplete.css'/>
 		<script src='../js/awesomplete.min.js' async></script>
@@ -40,7 +40,7 @@
 					</form>
 					<img class='search-icon' src='../res/search.svg'>
 				</div>
-				
+
 				<div class='active-agents-list'>
 					<div class='active-agents-title'>Active Agents</div>
 					{{#each agents}}
@@ -74,17 +74,17 @@
 			</div>
 			<div class='right-column'>
 				<div class='video-feed'>
+					<div class='video-feed-title'>Videos by CSGi</div>
 					{{#each liveVideos}}
-						<div class='video clickable-video' id='{{_id}}'>
+						<div class='video live-video clickable-video' id='{{_id}}'>
 							<img src='{{imageUrl}}' class='clickable-video' id='{{_id}}'/>
-							<div class='video-text corporate-account-video-text-live clickable-video' id='{{_id}}'>Live Now</div>				
+							<div class='video-text text-live clickable-video' id='{{_id}}'>Live Now</div>				
 						</div>
 					{{/each}}
-					<div class='divider'> </div>
 					{{#each nonLiveVideos}}
 						<div class='video clickable-video' id='{{_id}}'>
-							<img src='{{imageUrl}}' class="corporate-account-video-player-posistion clickable-video" id='{{_id}}'/>
-							<img src="../res/ic_play_circle_outline_black_24px.svg" class="corporate-account-video-player-play-button clickable-video" id='{{_id}}'/>
+							<img src='{{imageUrl}}' class="player-position clickable-video" id='{{_id}}'/>
+							<img src="../res/play.svg" class="play-button clickable-video" id='{{_id}}'/>
 						</div>
 					{{/each}}
 				</div>
