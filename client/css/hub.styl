@@ -62,9 +62,10 @@ center(t = auto, r = auto, b = auto, l = auto)
 	font-weight 300
 	font-family 'Open Sans'
 	text-align center
+	display none
 
 .hub-title-highlight
-	set-dimension(2px, 550px)
+	set-dimension(2px, 0)
 	center(47.5%, , , 50%)
 	background white
 
@@ -83,7 +84,7 @@ center(t = auto, r = auto, b = auto, l = auto)
 	background white
 	border 3px solid grey
 	padding 12px
-	margin 48px 0
+	margin 128px 0
 	box-sizing border-box
 	display flex
 	justify-content flex-end
@@ -107,6 +108,9 @@ center(t = auto, r = auto, b = auto, l = auto)
 .hub-search-icon
 	set-dimension(, 64px)
 
+	&:hover
+		cursor pointer
+
 .card-wrapper
 	set-dimension(400px, 100vw)
 	display flex
@@ -116,6 +120,7 @@ center(t = auto, r = auto, b = auto, l = auto)
 	box-sizing border-box
 	set-dimension(100%, )
 	position relative
+	color white
 
 	&:hover
 		cursor pointer
@@ -127,7 +132,6 @@ center(t = auto, r = auto, b = auto, l = auto)
 
 .card-title
 	center(50%, , , 50%)
-	color white
 	font-family 'Open Sans'
 	font-size 48px
 

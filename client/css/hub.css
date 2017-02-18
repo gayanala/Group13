@@ -32,10 +32,11 @@
   font-weight: 300;
   font-family: 'Open Sans';
   text-align: center;
+  display: none;
 }
 .hub-title-highlight {
   height: 2px;
-  width: 550px;
+  width: 0;
   position: absolute;
   top: 47.5%;
   left: 50%;
@@ -59,7 +60,7 @@
   background: #fff;
   border: 3px solid #ddd;
   padding: 12px;
-  margin: 48px 0;
+  margin: 128px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
@@ -84,6 +85,9 @@
 .hub-search-icon {
   width: 64px;
 }
+.hub-search-icon:hover {
+  cursor: pointer;
+}
 .card-wrapper {
   height: 400px;
   width: 100vw;
@@ -94,6 +98,7 @@
   box-sizing: border-box;
   height: 100%;
   position: relative;
+  color: #fff;
 }
 .card:hover {
   cursor: pointer;
@@ -112,7 +117,6 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   font-family: 'Open Sans';
   font-size: 48px;
 }
