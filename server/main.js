@@ -29,7 +29,7 @@ Meteor.startup(() => {
 			lastName: 'Bleyhl',
 			email: 'sheila.bleyhl@csgi.com',
 			phoneNumber: '(402) 123-4567',
-			videoLink: 'www.link.com/blehylvideo',
+			videoLink: 'www.support.com/blehylvideo',
 			imageUrl: '/res/agent1.jpeg',
 			available: true,
 			waitTime: 0
@@ -41,7 +41,7 @@ Meteor.startup(() => {
 			lastName: 'Gene',
 			email: 'brandon.gene@csgi.com',
 			phoneNumber: '(402) 555-3947',
-			videoLink: 'www.link.com/genevideo',
+			videoLink: 'www.support.com/genevideo',
 			imageUrl: '/res/agent2.jpeg',
 			available: false,
 			waitTime: 11
@@ -53,7 +53,7 @@ Meteor.startup(() => {
 			lastName: 'Darrin',
 			email: 'lauren.darrin@csgi.com',
 			phoneNumber: '(402) 555-3129',
-			videoLink: 'www.link.com/darrinvideo',
+			videoLink: 'www.support.com/darrinvideo',
 			imageUrl: '/res/agent3.jpeg',
 			available: false,
 			waitTime: 4
@@ -65,7 +65,7 @@ Meteor.startup(() => {
 			lastName: 'Reagan',
 			email: 'ronald.reagan@csgi.com',
 			phoneNumber: '(402) 555-9394',
-			videoLink: 'www.link.com/reaganvideo',
+			videoLink: 'www.support.com/reaganvideo',
 			imageUrl: '/res/agent4.jpeg',
 			available: true,
 			waitTime: 0
@@ -77,7 +77,7 @@ Meteor.startup(() => {
 			lastName: 'Freud',
 			email: 'jerrod.sigmund@csgi.com',
 			phoneNumber: '(402) 555-2010',
-			videoLink: 'www.link.com/sigmundvideo',
+			videoLink: 'www.support.com/sigmundvideo',
 			imageUrl: '/res/agent5.jpeg',
 			available: false,
 			waitTime: 2
@@ -89,7 +89,7 @@ Meteor.startup(() => {
 			lastName: 'Slade',
 			email: 'len.slade@csgi.com',
 			phoneNumber: '(402) 555-1282',
-			videoLink: 'www.link.com/sladevideo',
+			videoLink: 'www.support.com/sladevideo',
 			imageUrl: '/res/agent6.jpeg',
 			available: true,
 			waitTime: 0
